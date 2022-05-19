@@ -1,0 +1,19 @@
+{
+    "entities": {
+        "hole": {
+            "class": "Hole",
+            "position": [
+                424.0,
+                40.0
+            ]
+        },
+        "player": {
+            "class": "Ball",
+            "position": [
+                427.33050537109375,
+                367.1024475097656
+            ]
+        }
+    },
+    "level": 6
+}

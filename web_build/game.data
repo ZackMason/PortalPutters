@@ -1,0 +1,10882 @@
+{
+    "level" : "level4.json",
+    "version": "1.0.0"
+}{
+	"__header__": {
+		"fileType": "LDtk Project JSON",
+		"app": "LDtk",
+		"doc": "https://ldtk.io/json",
+		"schema": "https://ldtk.io/files/JSON_SCHEMA.json",
+		"appAuthor": "Sebastien 'deepnight' Benard",
+		"appVersion": "1.1.3",
+		"url": "https://ldtk.io"
+	},
+	"jsonVersion": "1.1.3",
+	"appBuildId": 458364,
+	"nextUid": 18,
+	"identifierStyle": "Capitalize",
+	"worldLayout": "LinearHorizontal",
+	"worldGridWidth": 256,
+	"worldGridHeight": 256,
+	"defaultLevelWidth": 256,
+	"defaultLevelHeight": 256,
+	"defaultPivotX": 0,
+	"defaultPivotY": 0,
+	"defaultGridSize": 16,
+	"bgColor": "#40465B",
+	"defaultLevelBgColor": "#696A79",
+	"minifyJson": false,
+	"externalLevels": false,
+	"exportTiled": false,
+	"simplifiedExport": false,
+	"imageExportMode": "None",
+	"pngFilePattern": null,
+	"backupOnSave": false,
+	"backupLimit": 10,
+	"levelNamePattern": "Level_%idx1",
+	"tutorialDesc": null,
+	"flags": [],
+	"defs": { "layers": [
+		{
+			"__type": "Entities",
+			"identifier": "Entities",
+			"type": "Entities",
+			"uid": 3,
+			"gridSize": 16,
+			"guideGridWid": 0,
+			"guideGridHei": 0,
+			"displayOpacity": 1,
+			"inactiveOpacity": 0.6,
+			"hideInList": false,
+			"hideFieldsWhenInactive": true,
+			"pxOffsetX": 0,
+			"pxOffsetY": 0,
+			"parallaxFactorX": 0,
+			"parallaxFactorY": 0,
+			"parallaxScaling": true,
+			"requiredTags": [],
+			"excludedTags": [],
+			"intGridValues": [],
+			"autoTilesetDefUid": null,
+			"autoRuleGroups": [],
+			"autoSourceLayerDefUid": null,
+			"tilesetDefUid": null,
+			"tilePivotX": 0,
+			"tilePivotY": 0
+		}
+	], "entities": [
+		{
+			"identifier": "Player",
+			"uid": 1,
+			"tags": [],
+			"width": 16,
+			"height": 16,
+			"resizableX": false,
+			"resizableY": false,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 1,
+			"lineOpacity": 1,
+			"hollow": false,
+			"color": "#0D0DDE",
+			"renderMode": "Ellipse",
+			"showName": true,
+			"tilesetId": null,
+			"tileId": null,
+			"tileRenderMode": "FitInside",
+			"tileRect": null,
+			"nineSliceBorders": [],
+			"maxCount": 1,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0.5,
+			"pivotY": 0.5,
+			"fieldDefs": []
+		},
+		{
+			"identifier": "Hole",
+			"uid": 2,
+			"tags": [],
+			"width": 16,
+			"height": 16,
+			"resizableX": false,
+			"resizableY": false,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 1,
+			"lineOpacity": 1,
+			"hollow": false,
+			"color": "#000000",
+			"renderMode": "Ellipse",
+			"showName": true,
+			"tilesetId": null,
+			"tileId": null,
+			"tileRenderMode": "FitInside",
+			"tileRect": null,
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0.5,
+			"pivotY": 0.5,
+			"fieldDefs": []
+		},
+		{
+			"identifier": "Wall",
+			"uid": 4,
+			"tags": [],
+			"width": 16,
+			"height": 16,
+			"resizableX": true,
+			"resizableY": true,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 1,
+			"lineOpacity": 1,
+			"hollow": false,
+			"color": "#94D9B3",
+			"renderMode": "Rectangle",
+			"showName": true,
+			"tilesetId": null,
+			"tileId": null,
+			"tileRenderMode": "FitInside",
+			"tileRect": null,
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0,
+			"pivotY": 0,
+			"fieldDefs": []
+		},
+		{
+			"identifier": "WorldText",
+			"uid": 8,
+			"tags": [],
+			"width": 16,
+			"height": 16,
+			"resizableX": false,
+			"resizableY": false,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 1,
+			"lineOpacity": 1,
+			"hollow": false,
+			"color": "#D4E2DA",
+			"renderMode": "Rectangle",
+			"showName": true,
+			"tilesetId": null,
+			"tileId": null,
+			"tileRenderMode": "FitInside",
+			"tileRect": null,
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0,
+			"pivotY": 0,
+			"fieldDefs": [
+				{
+					"identifier": "text",
+					"__type": "String",
+					"uid": 10,
+					"type": "F_Text",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "NameAndValue",
+					"editorDisplayPos": "Center",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "font_size",
+					"__type": "Int",
+					"uid": 11,
+					"type": "F_Int",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": 8,
+					"max": 54,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": { "id": "V_Int", "params": [24] },
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "offset",
+					"__type": "Int",
+					"uid": 12,
+					"type": "F_Int",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": 0,
+					"max": 12,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": { "id": "V_Int", "params": [2] },
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "name",
+					"__type": "String",
+					"uid": 13,
+					"type": "F_String",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": {
+						"id": "V_String",
+						"params": ["help"]
+					},
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				}
+			]
+		}
+	], "tilesets": [], "enums": [], "externalEnums": [], "levelFields": [
+		{
+			"identifier": "gravity",
+			"__type": "Float",
+			"uid": 16,
+			"type": "F_Float",
+			"isArray": false,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "Hidden",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"editorTextSuffix": null,
+			"editorTextPrefix": null,
+			"useForSmartColor": false,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null,
+			"symmetricalRef": false,
+			"autoChainRef": true,
+			"allowOutOfLevelRef": true,
+			"allowedRefs": "OnlySame",
+			"allowedRefTags": [],
+			"tilesetUid": null
+		},
+		{
+			"identifier": "start_zoom",
+			"__type": "Float",
+			"uid": 17,
+			"type": "F_Float",
+			"isArray": false,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "Hidden",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"editorTextSuffix": null,
+			"editorTextPrefix": null,
+			"useForSmartColor": false,
+			"min": 1,
+			"max": 10,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": { "id": "V_Float", "params": [1] },
+			"textLanguageMode": null,
+			"symmetricalRef": false,
+			"autoChainRef": true,
+			"allowOutOfLevelRef": true,
+			"allowedRefs": "OnlySame",
+			"allowedRefTags": [],
+			"tilesetUid": null
+		}
+	] },
+	"levels": [
+		{
+			"identifier": "Level_1",
+			"iid": "a1fa9e30-b4d0-11ec-9378-f174054b1198",
+			"uid": 0,
+			"worldX": -1,
+			"worldY": -1,
+			"worldDepth": 0,
+			"pxWid": 240,
+			"pxHei": 256,
+			"__bgColor": "#696A79",
+			"bgColor": null,
+			"useAutoIdentifier": true,
+			"bgRelPath": null,
+			"bgPos": null,
+			"bgPivotX": 0.5,
+			"bgPivotY": 0.5,
+			"__smartColor": "#ADADB5",
+			"__bgPos": null,
+			"externalRelPath": null,
+			"fieldInstances": [
+				{ "__identifier": "gravity", "__value": 0, "__type": "Float", "__tile": null, "defUid": 16, "realEditorValues": [] },
+				{ "__identifier": "start_zoom", "__value": 2, "__type": "Float", "__tile": null, "defUid": 17, "realEditorValues": [{ "id": "V_Float", "params": [2] }] }
+			],
+			"layerInstances": [
+				{
+					"__identifier": "Entities",
+					"__type": "Entities",
+					"__cWid": 15,
+					"__cHei": 16,
+					"__gridSize": 16,
+					"__opacity": 1,
+					"__pxTotalOffsetX": 0,
+					"__pxTotalOffsetY": 0,
+					"__tilesetDefUid": null,
+					"__tilesetRelPath": null,
+					"iid": "04854090-b4d0-11ec-9378-6b563f47da01",
+					"levelId": 0,
+					"layerDefUid": 3,
+					"pxOffsetX": 0,
+					"pxOffsetY": 0,
+					"visible": true,
+					"optionalRules": [],
+					"intGridCsv": [],
+					"autoLayerTiles": [],
+					"seed": 5387353,
+					"overrideTilesetUid": null,
+					"gridTiles": [],
+					"entityInstances": [
+						{
+							"__identifier": "Player",
+							"__grid": [7,14],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#0D0DDE",
+							"iid": "10318890-b4d0-11ec-9378-bb87aed65a1b",
+							"width": 16,
+							"height": 16,
+							"defUid": 1,
+							"px": [120,232],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Hole",
+							"__grid": [7,1],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#000000",
+							"iid": "144ba4b0-b4d0-11ec-9378-9397abfb4194",
+							"width": 16,
+							"height": 16,
+							"defUid": 2,
+							"px": [120,24],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,15],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "2dde6d40-b4d0-11ec-9378-c152796fdd02",
+							"width": 208,
+							"height": 16,
+							"defUid": 4,
+							"px": [16,240],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [0,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "32072f60-b4d0-11ec-9378-0fcab91c8cfb",
+							"width": 16,
+							"height": 256,
+							"defUid": 4,
+							"px": [0,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "357c31e0-b4d0-11ec-9378-256edf0d67c4",
+							"width": 224,
+							"height": 16,
+							"defUid": 4,
+							"px": [16,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [14,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "38a27820-b4d0-11ec-9378-51cc914fde1c",
+							"width": 16,
+							"height": 240,
+							"defUid": 4,
+							"px": [224,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "WorldText",
+							"__grid": [9,9],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#D4E2DA",
+							"iid": "2d228360-b4d0-11ec-9378-7f16d53370bf",
+							"width": 16,
+							"height": 16,
+							"defUid": 8,
+							"px": [144,144],
+							"fieldInstances": [
+								{ "__identifier": "text", "__value": "Hit the\n  ball into\n    the hole", "__type": "String", "__tile": null, "defUid": 10, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Hit the\n  ball into\n    the hole"]
+								}] },
+								{ "__identifier": "font_size", "__value": 8, "__type": "Int", "__tile": null, "defUid": 11, "realEditorValues": [{ "id": "V_Int", "params": [8] }] },
+								{ "__identifier": "offset", "__value": 1, "__type": "Int", "__tile": null, "defUid": 12, "realEditorValues": [{ "id": "V_Int", "params": [1] }] },
+								{ "__identifier": "name", "__value": "help", "__type": "String", "__tile": null, "defUid": 13, "realEditorValues": [] }
+							]
+						}
+					]
+				}
+			],
+			"__neighbours": []
+		},
+		{
+			"identifier": "Level_2",
+			"iid": "b5a6eae0-b4d0-11ec-9378-ed22f82be3a5",
+			"uid": 5,
+			"worldX": -1,
+			"worldY": -1,
+			"worldDepth": 0,
+			"pxWid": 288,
+			"pxHei": 256,
+			"__bgColor": "#696A79",
+			"bgColor": null,
+			"useAutoIdentifier": true,
+			"bgRelPath": null,
+			"bgPos": null,
+			"bgPivotX": 0.5,
+			"bgPivotY": 0.5,
+			"__smartColor": "#ADADB5",
+			"__bgPos": null,
+			"externalRelPath": null,
+			"fieldInstances": [
+				{ "__identifier": "gravity", "__value": 0, "__type": "Float", "__tile": null, "defUid": 16, "realEditorValues": [] },
+				{ "__identifier": "start_zoom", "__value": 2, "__type": "Float", "__tile": null, "defUid": 17, "realEditorValues": [{ "id": "V_Float", "params": [2] }] }
+			],
+			"layerInstances": [
+				{
+					"__identifier": "Entities",
+					"__type": "Entities",
+					"__cWid": 18,
+					"__cHei": 16,
+					"__gridSize": 16,
+					"__opacity": 1,
+					"__pxTotalOffsetX": 0,
+					"__pxTotalOffsetY": 0,
+					"__tilesetDefUid": null,
+					"__tilesetRelPath": null,
+					"iid": "b5a6eae1-b4d0-11ec-9378-ed7da7208023",
+					"levelId": 5,
+					"layerDefUid": 3,
+					"pxOffsetX": 0,
+					"pxOffsetY": 0,
+					"visible": true,
+					"optionalRules": [],
+					"intGridCsv": [],
+					"autoLayerTiles": [],
+					"seed": 581324,
+					"overrideTilesetUid": null,
+					"gridTiles": [],
+					"entityInstances": [
+						{
+							"__identifier": "Player",
+							"__grid": [12,2],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#0D0DDE",
+							"iid": "ba3b8e30-b4d0-11ec-9378-dde4762e3b27",
+							"width": 16,
+							"height": 16,
+							"defUid": 1,
+							"px": [200,40],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Hole",
+							"__grid": [3,2],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#000000",
+							"iid": "bd692770-b4d0-11ec-9378-3b5d4b5fe46e",
+							"width": 16,
+							"height": 16,
+							"defUid": 2,
+							"px": [56,40],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [0,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "bef0d8e0-b4d0-11ec-9378-899f69d8328f",
+							"width": 256,
+							"height": 16,
+							"defUid": 4,
+							"px": [0,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [15,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c0061970-b4d0-11ec-9378-5d62de183692",
+							"width": 16,
+							"height": 240,
+							"defUid": 4,
+							"px": [240,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [0,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c1aec060-b4d0-11ec-9378-5fe1bd0f9f65",
+							"width": 16,
+							"height": 240,
+							"defUid": 4,
+							"px": [0,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [7,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c371cd20-b4d0-11ec-9378-e3577567f31e",
+							"width": 32,
+							"height": 176,
+							"defUid": 4,
+							"px": [112,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,15],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c88c1b30-b4d0-11ec-9378-974113f46726",
+							"width": 224,
+							"height": 16,
+							"defUid": 4,
+							"px": [16,240],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "WorldText",
+							"__grid": [17,2],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#D4E2DA",
+							"iid": "5ef64020-b4d0-11ec-9378-07892d923b15",
+							"width": 16,
+							"height": 16,
+							"defUid": 8,
+							"px": [272,32],
+							"fieldInstances": [
+								{ "__identifier": "text", "__value": "Bounce off\n  of the wall", "__type": "String", "__tile": null, "defUid": 10, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Bounce off\n  of the wall"]
+								}] },
+								{ "__identifier": "font_size", "__value": 8, "__type": "Int", "__tile": null, "defUid": 11, "realEditorValues": [{ "id": "V_Int", "params": [8] }] },
+								{ "__identifier": "offset", "__value": 1, "__type": "Int", "__tile": null, "defUid": 12, "realEditorValues": [{ "id": "V_Int", "params": [1] }] },
+								{ "__identifier": "name", "__value": "help", "__type": "String", "__tile": null, "defUid": 13, "realEditorValues": [] }
+							]
+						}
+					]
+				}
+			],
+			"__neighbours": []
+		},
+		{
+			"identifier": "Level_3",
+			"iid": "70e6ae00-b4d0-11ec-9378-891bf3a65a35",
+			"uid": 7,
+			"worldX": -1,
+			"worldY": -1,
+			"worldDepth": 0,
+			"pxWid": 272,
+			"pxHei": 256,
+			"__bgColor": "#696A79",
+			"bgColor": null,
+			"useAutoIdentifier": true,
+			"bgRelPath": null,
+			"bgPos": null,
+			"bgPivotX": 0.5,
+			"bgPivotY": 0.5,
+			"__smartColor": "#ADADB5",
+			"__bgPos": null,
+			"externalRelPath": null,
+			"fieldInstances": [
+				{ "__identifier": "gravity", "__value": 0, "__type": "Float", "__tile": null, "defUid": 16, "realEditorValues": [] },
+				{ "__identifier": "start_zoom", "__value": 2, "__type": "Float", "__tile": null, "defUid": 17, "realEditorValues": [{ "id": "V_Float", "params": [2] }] }
+			],
+			"layerInstances": [
+				{
+					"__identifier": "Entities",
+					"__type": "Entities",
+					"__cWid": 17,
+					"__cHei": 16,
+					"__gridSize": 16,
+					"__opacity": 1,
+					"__pxTotalOffsetX": 0,
+					"__pxTotalOffsetY": 0,
+					"__tilesetDefUid": null,
+					"__tilesetRelPath": null,
+					"iid": "70e6ae01-b4d0-11ec-9378-cfb51b0d93e5",
+					"levelId": 7,
+					"layerDefUid": 3,
+					"pxOffsetX": 0,
+					"pxOffsetY": 0,
+					"visible": true,
+					"optionalRules": [],
+					"intGridCsv": [],
+					"autoLayerTiles": [],
+					"seed": 1654642,
+					"overrideTilesetUid": null,
+					"gridTiles": [],
+					"entityInstances": [
+						{
+							"__identifier": "Hole",
+							"__grid": [8,2],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#000000",
+							"iid": "8595c8e0-b4d0-11ec-9378-958e41156a0b",
+							"width": 16,
+							"height": 16,
+							"defUid": 2,
+							"px": [136,40],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Player",
+							"__grid": [8,14],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#0D0DDE",
+							"iid": "877de9d0-b4d0-11ec-9378-47f9a4a5d4c3",
+							"width": 16,
+							"height": 16,
+							"defUid": 1,
+							"px": [136,232],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [0,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "8f031d60-b4d0-11ec-9378-057d6844b0ab",
+							"width": 272,
+							"height": 16,
+							"defUid": 4,
+							"px": [0,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [16,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "90f59e90-b4d0-11ec-9378-31ca73babfbd",
+							"width": 16,
+							"height": 224,
+							"defUid": 4,
+							"px": [256,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [0,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "9315bf70-b4d0-11ec-9378-9bba659a0d27",
+							"width": 16,
+							"height": 224,
+							"defUid": 4,
+							"px": [0,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [0,15],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "945b37c0-b4d0-11ec-9378-7538c6b0517c",
+							"width": 272,
+							"height": 16,
+							"defUid": 4,
+							"px": [0,240],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [7,4],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "977f0d00-b4d0-11ec-9378-e374401c6171",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [112,64],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "WorldText",
+							"__grid": [10,7],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#D4E2DA",
+							"iid": "e7bc2b30-b4d0-11ec-9378-37dffe34e194",
+							"width": 16,
+							"height": 16,
+							"defUid": 8,
+							"px": [160,112],
+							"fieldInstances": [
+								{ "__identifier": "text", "__value": "Dodge\n  the obstacle", "__type": "String", "__tile": null, "defUid": 10, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Dodge\n  the obstacle"]
+								}] },
+								{ "__identifier": "font_size", "__value": 8, "__type": "Int", "__tile": null, "defUid": 11, "realEditorValues": [{ "id": "V_Int", "params": [8] }] },
+								{ "__identifier": "offset", "__value": 1, "__type": "Int", "__tile": null, "defUid": 12, "realEditorValues": [{ "id": "V_Int", "params": [1] }] },
+								{ "__identifier": "name", "__value": "help", "__type": "String", "__tile": null, "defUid": 13, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["help"]
+								}] }
+							]
+						}
+					]
+				}
+			],
+			"__neighbours": []
+		},
+		{
+			"identifier": "Level_4",
+			"iid": "99918000-b4d0-11ec-9378-a9a8574c47c9",
+			"uid": 14,
+			"worldX": -1,
+			"worldY": -1,
+			"worldDepth": 0,
+			"pxWid": 288,
+			"pxHei": 256,
+			"__bgColor": "#696A79",
+			"bgColor": null,
+			"useAutoIdentifier": true,
+			"bgRelPath": null,
+			"bgPos": null,
+			"bgPivotX": 0.5,
+			"bgPivotY": 0.5,
+			"__smartColor": "#ADADB5",
+			"__bgPos": null,
+			"externalRelPath": null,
+			"fieldInstances": [
+				{ "__identifier": "gravity", "__value": 0, "__type": "Float", "__tile": null, "defUid": 16, "realEditorValues": [] },
+				{ "__identifier": "start_zoom", "__value": 2, "__type": "Float", "__tile": null, "defUid": 17, "realEditorValues": [{ "id": "V_Float", "params": [2] }] }
+			],
+			"layerInstances": [
+				{
+					"__identifier": "Entities",
+					"__type": "Entities",
+					"__cWid": 18,
+					"__cHei": 16,
+					"__gridSize": 16,
+					"__opacity": 1,
+					"__pxTotalOffsetX": 0,
+					"__pxTotalOffsetY": 0,
+					"__tilesetDefUid": null,
+					"__tilesetRelPath": null,
+					"iid": "9991a710-b4d0-11ec-9378-13aa2c4f55a5",
+					"levelId": 14,
+					"layerDefUid": 3,
+					"pxOffsetX": 0,
+					"pxOffsetY": 0,
+					"visible": true,
+					"optionalRules": [],
+					"intGridCsv": [],
+					"autoLayerTiles": [],
+					"seed": 9625302,
+					"overrideTilesetUid": null,
+					"gridTiles": [],
+					"entityInstances": [
+						{
+							"__identifier": "Wall",
+							"__grid": [0,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "a6e66ef0-b4d0-11ec-9378-41f29d78cad1",
+							"width": 16,
+							"height": 256,
+							"defUid": 4,
+							"px": [0,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [15,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "a97e57e0-b4d0-11ec-9378-f3235fd28f6a",
+							"width": 16,
+							"height": 256,
+							"defUid": 4,
+							"px": [240,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,15],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "ac255c00-b4d0-11ec-9378-67035d1a774c",
+							"width": 224,
+							"height": 16,
+							"defUid": 4,
+							"px": [16,240],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "b03f9f30-b4d0-11ec-9378-df03dd82cfef",
+							"width": 224,
+							"height": 16,
+							"defUid": 4,
+							"px": [16,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [11,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "b239c180-b4d0-11ec-9378-e7d9e2078350",
+							"width": 48,
+							"height": 176,
+							"defUid": 4,
+							"px": [176,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [3,13],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "b65ba5d0-b4d0-11ec-9378-1f9e8934c571",
+							"width": 176,
+							"height": 32,
+							"defUid": 4,
+							"px": [48,208],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [8,5],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "bb55e8c0-b4d0-11ec-9378-b5ff7961bc51",
+							"width": 32,
+							"height": 128,
+							"defUid": 4,
+							"px": [128,80],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [2,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "bf5ccb00-b4d0-11ec-9378-fd8812356dc7",
+							"width": 128,
+							"height": 48,
+							"defUid": 4,
+							"px": [32,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [4,4],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c4906d70-b4d0-11ec-9378-651f64ffceba",
+							"width": 48,
+							"height": 96,
+							"defUid": 4,
+							"px": [64,64],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [3,11],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c7f8c5c0-b4d0-11ec-9378-e5547721453e",
+							"width": 64,
+							"height": 32,
+							"defUid": 4,
+							"px": [48,176],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,11],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "ceb79c10-b4d0-11ec-9378-e77e7d1b001e",
+							"width": 16,
+							"height": 64,
+							"defUid": 4,
+							"px": [16,176],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,6],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "cfd82740-b4d0-11ec-9378-8fd42bc8b8ee",
+							"width": 32,
+							"height": 64,
+							"defUid": 4,
+							"px": [16,96],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [2,4],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "df3fa280-b4d0-11ec-9378-3152145a2b2f",
+							"width": 16,
+							"height": 16,
+							"defUid": 4,
+							"px": [32,64],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Hole",
+							"__grid": [1,1],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#000000",
+							"iid": "e2c12820-b4d0-11ec-9378-2dc531d760ce",
+							"width": 16,
+							"height": 16,
+							"defUid": 2,
+							"px": [24,24],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Player",
+							"__grid": [14,1],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#0D0DDE",
+							"iid": "e4d9a7e0-b4d0-11ec-9378-e3c10f4a9951",
+							"width": 16,
+							"height": 16,
+							"defUid": 1,
+							"px": [232,24],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "WorldText",
+							"__grid": [17,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#D4E2DA",
+							"iid": "1b059600-b4d0-11ec-9378-9dc3645eea7a",
+							"width": 16,
+							"height": 16,
+							"defUid": 8,
+							"px": [272,16],
+							"fieldInstances": [
+								{ "__identifier": "text", "__value": "Good luck", "__type": "String", "__tile": null, "defUid": 10, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Good luck"]
+								}] },
+								{ "__identifier": "font_size", "__value": 8, "__type": "Int", "__tile": null, "defUid": 11, "realEditorValues": [{ "id": "V_Int", "params": [8] }] },
+								{ "__identifier": "offset", "__value": 1, "__type": "Int", "__tile": null, "defUid": 12, "realEditorValues": [{ "id": "V_Int", "params": [1] }] },
+								{ "__identifier": "name", "__value": "help", "__type": "String", "__tile": null, "defUid": 13, "realEditorValues": [] }
+							]
+						}
+					]
+				}
+			],
+			"__neighbours": []
+		},
+		{
+			"identifier": "Level_5",
+			"iid": "d1b73690-b4d0-11ec-9378-97c038942b6c",
+			"uid": 6,
+			"worldX": -1,
+			"worldY": -1,
+			"worldDepth": 0,
+			"pxWid": 368,
+			"pxHei": 512,
+			"__bgColor": "#696A79",
+			"bgColor": null,
+			"useAutoIdentifier": true,
+			"bgRelPath": null,
+			"bgPos": null,
+			"bgPivotX": 0.5,
+			"bgPivotY": 0.5,
+			"__smartColor": "#ADADB5",
+			"__bgPos": null,
+			"externalRelPath": null,
+			"fieldInstances": [
+				{ "__identifier": "gravity", "__value": 0, "__type": "Float", "__tile": null, "defUid": 16, "realEditorValues": [] },
+				{ "__identifier": "start_zoom", "__value": 2, "__type": "Float", "__tile": null, "defUid": 17, "realEditorValues": [{ "id": "V_Float", "params": [2] }] }
+			],
+			"layerInstances": [
+				{
+					"__identifier": "Entities",
+					"__type": "Entities",
+					"__cWid": 23,
+					"__cHei": 32,
+					"__gridSize": 16,
+					"__opacity": 1,
+					"__pxTotalOffsetX": 0,
+					"__pxTotalOffsetY": 0,
+					"__tilesetDefUid": null,
+					"__tilesetRelPath": null,
+					"iid": "d1b73691-b4d0-11ec-9378-0f8df22dc40b",
+					"levelId": 6,
+					"layerDefUid": 3,
+					"pxOffsetX": 0,
+					"pxOffsetY": 0,
+					"visible": true,
+					"optionalRules": [],
+					"intGridCsv": [],
+					"autoLayerTiles": [],
+					"seed": 3581395,
+					"overrideTilesetUid": null,
+					"gridTiles": [],
+					"entityInstances": [
+						{
+							"__identifier": "Player",
+							"__grid": [14,2],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#0D0DDE",
+							"iid": "d7db2c70-b4d0-11ec-9378-33e1d525c095",
+							"width": 16,
+							"height": 16,
+							"defUid": 1,
+							"px": [232,40],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Hole",
+							"__grid": [8,2],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#000000",
+							"iid": "d9dcc8d0-b4d0-11ec-9378-1944db60116d",
+							"width": 16,
+							"height": 16,
+							"defUid": 2,
+							"px": [136,40],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [0,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "db8ce9d0-b4d0-11ec-9378-f16a92e3d73f",
+							"width": 368,
+							"height": 16,
+							"defUid": 4,
+							"px": [0,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [22,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "dca75a80-b4d0-11ec-9378-fd977eca18aa",
+							"width": 16,
+							"height": 496,
+							"defUid": 4,
+							"px": [352,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,31],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "eddc42c0-b4d0-11ec-9378-7533fe3b8c65",
+							"width": 336,
+							"height": 16,
+							"defUid": 4,
+							"px": [16,496],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [0,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "f0ae7590-b4d0-11ec-9378-0baf552e073c",
+							"width": 16,
+							"height": 496,
+							"defUid": 4,
+							"px": [0,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [11,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "f4d032d0-b4d0-11ec-9378-cba9e14129c4",
+							"width": 16,
+							"height": 416,
+							"defUid": 4,
+							"px": [176,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [7,4],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "031945c0-b4d0-11ec-9378-fdec16ccac92",
+							"width": 64,
+							"height": 16,
+							"defUid": 4,
+							"px": [112,64],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [12,4],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "0ea1d920-b4d0-11ec-9378-4d6222f9a7f4",
+							"width": 64,
+							"height": 16,
+							"defUid": 4,
+							"px": [192,64],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [16,10],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "122385d0-b4d0-11ec-9378-f10804c0897a",
+							"width": 96,
+							"height": 16,
+							"defUid": 4,
+							"px": [256,160],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,10],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "148606e0-b4d0-11ec-9378-a314fa05f5c2",
+							"width": 96,
+							"height": 16,
+							"defUid": 4,
+							"px": [16,160],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [12,16],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "1ce0d9f0-b4d0-11ec-9378-3dcd97971139",
+							"width": 96,
+							"height": 16,
+							"defUid": 4,
+							"px": [192,256],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [5,16],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "1ea80560-b4d0-11ec-9378-25073be5190e",
+							"width": 96,
+							"height": 16,
+							"defUid": 4,
+							"px": [80,256],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [16,22],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "2840d6b0-b4d0-11ec-9378-6dc512461a67",
+							"width": 96,
+							"height": 16,
+							"defUid": 4,
+							"px": [256,352],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,22],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "2a427310-b4d0-11ec-9378-f53c53e5ac7b",
+							"width": 96,
+							"height": 16,
+							"defUid": 4,
+							"px": [16,352],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [5,27],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "474c4380-b4d0-11ec-9378-db120c090a33",
+							"width": 208,
+							"height": 16,
+							"defUid": 4,
+							"px": [80,432],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "WorldText",
+							"__grid": [17,2],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#D4E2DA",
+							"iid": "01b27a10-b4d0-11ec-9378-e1fbb41686c0",
+							"width": 16,
+							"height": 16,
+							"defUid": 8,
+							"px": [272,32],
+							"fieldInstances": [
+								{ "__identifier": "text", "__value": "Navigate\n  the path", "__type": "String", "__tile": null, "defUid": 10, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Navigate\n  the path"]
+								}] },
+								{ "__identifier": "font_size", "__value": 8, "__type": "Int", "__tile": null, "defUid": 11, "realEditorValues": [{ "id": "V_Int", "params": [8] }] },
+								{ "__identifier": "offset", "__value": 1, "__type": "Int", "__tile": null, "defUid": 12, "realEditorValues": [{ "id": "V_Int", "params": [1] }] },
+								{ "__identifier": "name", "__value": "help", "__type": "String", "__tile": null, "defUid": 13, "realEditorValues": [] }
+							]
+						}
+					]
+				}
+			],
+			"__neighbours": []
+		},
+		{
+			"identifier": "Level_6",
+			"iid": "31596bc0-b4d0-11ec-9378-1923bd9020f7",
+			"uid": 15,
+			"worldX": -1,
+			"worldY": -1,
+			"worldDepth": 0,
+			"pxWid": 464,
+			"pxHei": 512,
+			"__bgColor": "#696A79",
+			"bgColor": null,
+			"useAutoIdentifier": true,
+			"bgRelPath": null,
+			"bgPos": null,
+			"bgPivotX": 0.5,
+			"bgPivotY": 0.5,
+			"__smartColor": "#ADADB5",
+			"__bgPos": null,
+			"externalRelPath": null,
+			"fieldInstances": [
+				{ "__identifier": "gravity", "__value": 9.81, "__type": "Float", "__tile": null, "defUid": 16, "realEditorValues": [{ "id": "V_Float", "params": [9.81] }] },
+				{ "__identifier": "start_zoom", "__value": 1, "__type": "Float", "__tile": null, "defUid": 17, "realEditorValues": [] }
+			],
+			"layerInstances": [
+				{
+					"__identifier": "Entities",
+					"__type": "Entities",
+					"__cWid": 29,
+					"__cHei": 32,
+					"__gridSize": 16,
+					"__opacity": 1,
+					"__pxTotalOffsetX": 0,
+					"__pxTotalOffsetY": 0,
+					"__tilesetDefUid": null,
+					"__tilesetRelPath": null,
+					"iid": "31596bc1-b4d0-11ec-9378-adbedfb705fd",
+					"levelId": 15,
+					"layerDefUid": 3,
+					"pxOffsetX": 0,
+					"pxOffsetY": 0,
+					"visible": true,
+					"optionalRules": [],
+					"intGridCsv": [],
+					"autoLayerTiles": [],
+					"seed": 4034793,
+					"overrideTilesetUid": null,
+					"gridTiles": [],
+					"entityInstances": [
+						{
+							"__identifier": "Wall",
+							"__grid": [0,31],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "3ba1de00-b4d0-11ec-9378-c3c0daaf0c59",
+							"width": 464,
+							"height": 16,
+							"defUid": 4,
+							"px": [0,496],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [28,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "3d05dad0-b4d0-11ec-9378-7f3f8916c7df",
+							"width": 16,
+							"height": 496,
+							"defUid": 4,
+							"px": [448,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [0,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "4017aeb0-b4d0-11ec-9378-e7e75ffa5016",
+							"width": 16,
+							"height": 496,
+							"defUid": 4,
+							"px": [0,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [0,0],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "451c03c0-b4d0-11ec-9378-49b8ef5b6200",
+							"width": 464,
+							"height": 16,
+							"defUid": 4,
+							"px": [0,0],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Hole",
+							"__grid": [26,2],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#000000",
+							"iid": "50388ee0-b4d0-11ec-9378-a3fbd05256b9",
+							"width": 16,
+							"height": 16,
+							"defUid": 2,
+							"px": [424,40],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Player",
+							"__grid": [4,29],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#0D0DDE",
+							"iid": "5270f2b0-b4d0-11ec-9378-031a624abef7",
+							"width": 16,
+							"height": 16,
+							"defUid": 1,
+							"px": [72,472],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [8,5],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "5927d9c0-b4d0-11ec-9378-b7af17947513",
+							"width": 16,
+							"height": 416,
+							"defUid": 4,
+							"px": [128,80],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [24,1],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "63155ac0-b4d0-11ec-9378-9786aa454ce7",
+							"width": 16,
+							"height": 416,
+							"defUid": 4,
+							"px": [384,16],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [9,5],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "6724ef90-b4d0-11ec-9378-877cc2f6e8eb",
+							"width": 96,
+							"height": 16,
+							"defUid": 4,
+							"px": [144,80],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [18,5],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "699d1b80-b4d0-11ec-9378-c9a50ea5c392",
+							"width": 96,
+							"height": 16,
+							"defUid": 4,
+							"px": [288,80],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [18,9],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "6a12e7c0-b4d0-11ec-9378-058edab2fda1",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [288,144],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [12,9],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "6fc4e1f0-b4d0-11ec-9378-1b2cfd4ade02",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [192,144],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [15,14],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "74cc9260-b4d0-11ec-9378-c3967027df20",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [240,224],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [21,14],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "76312b70-b4d0-11ec-9378-c5ef924745a8",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [336,224],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [9,14],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "77b5cfa0-b4d0-11ec-9378-99b6b540161b",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [144,224],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [12,19],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "7d6272a0-b4d0-11ec-9378-21cf3e3f4e49",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [192,304],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [18,19],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "7ea308f0-b4d0-11ec-9378-831983860017",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [288,304],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [15,24],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "80b28800-b4d0-11ec-9378-1dda82b2123b",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [240,384],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [21,24],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "81ffa170-b4d0-11ec-9378-27da22bcc7f8",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [336,384],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [9,24],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "8325aae0-b4d0-11ec-9378-33fce21ee820",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [144,384],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [13,27],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "85a96f90-b4d0-11ec-9378-9f4635586c02",
+							"width": 16,
+							"height": 32,
+							"defUid": 4,
+							"px": [208,432],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [19,27],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "875c4fb0-b4d0-11ec-9378-673b1c95d6fd",
+							"width": 16,
+							"height": 32,
+							"defUid": 4,
+							"px": [304,432],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [24,29],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "89519000-b4d0-11ec-9378-374fc2db21f0",
+							"width": 16,
+							"height": 32,
+							"defUid": 4,
+							"px": [384,464],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,25],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "957a33f0-b4d0-11ec-9378-1f354ebc54ba",
+							"width": 32,
+							"height": 16,
+							"defUid": 4,
+							"px": [16,400],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [6,25],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "968cdc70-b4d0-11ec-9378-91e5fba6ed70",
+							"width": 32,
+							"height": 16,
+							"defUid": 4,
+							"px": [96,400],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [3,18],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "9a06e800-b4d0-11ec-9378-cd2dd126cbf7",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [48,288],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [5,11],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "a00861c0-b4d0-11ec-9378-3de59601a635",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [80,176],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Wall",
+							"__grid": [1,5],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "a1fe8c70-b4d0-11ec-9378-5f1b4d536443",
+							"width": 48,
+							"height": 16,
+							"defUid": 4,
+							"px": [16,80],
+							"fieldInstances": []
+						}
+					]
+				}
+			],
+			"__neighbours": []
+		}
+	],
+	"worlds": []
+}{
+    "entities": {
+        "hole": {
+            "class": "Hole",
+            "position": [
+                0.0,
+                -350.0
+            ]
+        },
+        "player": {
+            "class": "Ball",
+            "position": [
+                0,
+                0
+            ]
+        },
+        "w1": {
+            "class": "Wall",
+            "position": [
+                250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w2": {
+            "class": "Wall",
+            "position": [
+                -250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w3": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w4": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "c1": {
+            "class": "Coin",
+            "position": [
+                0.0, -50.0
+            ]
+        },
+        "c2": {
+            "class": "Coin",
+            "position": [
+                0.0, -100.0
+            ]
+        },
+        "c3": {
+            "class": "Coin",
+            "position": [
+                0.0, -150.0
+            ]
+        }
+    },
+    "level": 1
+}
+{
+    "entities": {
+        "hole": {
+            "class": "Hole",
+            "position": [
+                0.0,
+                -350.0
+            ]
+        },
+        "player": {
+            "class": "Ball",
+            "position": [
+                0,
+                0
+            ]
+        },
+        "w1": {
+            "class": "Wall",
+            "position": [
+                250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w2": {
+            "class": "Wall",
+            "position": [
+                -250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w3": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w4": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w5": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "help": {
+            "class": "WorldText",
+            "position": [
+                100,
+                -100
+            ],
+            "text": "Dodge the \n obstacle",
+            "font_size": 22,
+            "offset": 2
+        },
+        "c1": {
+            "class": "Coin",
+            "position": [
+                0.0, -50.0
+            ]
+        },
+        "c2": {
+            "class": "Coin",
+            "position": [
+                0.0, -100.0
+            ]
+        },
+        "c3": {
+            "class": "Coin",
+            "position": [
+                0.0, -150.0
+            ]
+        }
+    },
+    "level": 2
+}
+{
+    "entities": {
+        "hole": {
+            "class": "Hole",
+            "position": [
+                0.0,
+                -350.0
+            ]
+        },
+        "player": {
+            "class": "Ball",
+            "position": [
+                0,
+                0
+            ]
+        },
+        "w1": {
+            "class": "Wall",
+            "position": [
+                250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w2": {
+            "class": "Wall",
+            "position": [
+                -250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w3": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w4": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w5": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "help": {
+            "class": "WorldText",
+            "position": [
+                100,
+                -100
+            ],
+            "text": "Dodge the \n obstacle",
+            "font_size": 22,
+            "offset": 2
+        },
+        "c1": {
+            "class": "Coin",
+            "position": [
+                0.0, -50.0
+            ]
+        },
+        "c2": {
+            "class": "Coin",
+            "position": [
+                0.0, -100.0
+            ]
+        },
+        "c3": {
+            "class": "Coin",
+            "position": [
+                0.0, -150.0
+            ]
+        }
+    },
+    "level": 3
+}
+{
+    "gravity" : [0.0, 9.81],
+    "entities": {
+        "hole": {
+            "class": "Hole",
+            "position": [
+                -70.0,
+                -350.0
+            ]
+        },
+        "player": {
+            "class": "Ball",
+            "position": [
+                70.0,
+                -350.0
+            ]
+        },
+        "w1": {
+            "class": "Wall",
+            "position": [
+                250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w2": {
+            "class": "Wall",
+            "position": [
+                -250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w3": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w4": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w5": {
+            "class": "Wall",
+            "position": [
+                75.0,
+                -225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w7": {
+            "class": "Wall",
+            "position": [
+                -75.0,
+                -225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w8": {
+            "class": "Wall",
+            "position": [
+                -175.0,
+                -25.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w9": {
+            "class": "Wall",
+            "position": [
+                175.0,
+                -25.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w10": {
+            "class": "Wall",
+            "position": [
+                75.0,
+                225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w11": {
+            "class": "Wall",
+            "position": [
+                -75.0,
+                225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w6": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -50.0
+            ],
+            "size": [
+                25.0,
+                750.0
+            ]
+        },
+        "help": {
+            "class": "WorldText",
+            "position": [
+                120,
+                -370
+            ],
+            "text": "Navigate \n the path",
+            "font_size": 22,
+            "offset": 2
+        }
+    },
+    "level": 4
+}
+{
+    "entities": {
+        "hole": {
+            "class": "Hole",
+            "position": [
+                0.0,
+                -350.0
+            ]
+        },
+        "player": {
+            "class": "Ball",
+            "position": [
+                0,
+                0
+            ]
+        },
+        "w1": {
+            "class": "Wall",
+            "position": [
+                250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w2": {
+            "class": "Wall",
+            "position": [
+                -250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w3": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w4": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w5": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "help": {
+            "class": "WorldText",
+            "position": [
+                100,
+                -100
+            ],
+            "text": "Dodge the \n obstacle",
+            "font_size": 22,
+            "offset": 2
+        },
+        "c1": {
+            "class": "Coin",
+            "position": [
+                0.0, -50.0
+            ]
+        },
+        "c2": {
+            "class": "Coin",
+            "position": [
+                0.0, -100.0
+            ]
+        },
+        "c3": {
+            "class": "Coin",
+            "position": [
+                0.0, -150.0
+            ]
+        }
+    },
+    "level": 6
+}
+{
+    "entities": {
+        "hole": {
+            "class": "Hole",
+            "position": [
+                0.0,
+                -350.0
+            ]
+        },
+        "player": {
+            "class": "Ball",
+            "position": [
+                0,
+                0
+            ]
+        },
+        "w1": {
+            "class": "Wall",
+            "position": [
+                250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w2": {
+            "class": "Wall",
+            "position": [
+                -250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w3": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w4": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w5": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "help": {
+            "class": "WorldText",
+            "position": [
+                100,
+                -100
+            ],
+            "text": "Dodge the \n obstacle",
+            "font_size": 22,
+            "offset": 2
+        },
+        "c1": {
+            "class": "Coin",
+            "position": [
+                0.0, -50.0
+            ]
+        },
+        "c2": {
+            "class": "Coin",
+            "position": [
+                0.0, -100.0
+            ]
+        },
+        "c3": {
+            "class": "Coin",
+            "position": [
+                0.0, -150.0
+            ]
+        }
+    },
+    "level": 7
+}
+@Actor
+@ActorData
+room
+test_room.gltf
+basic
+brick_02/bricks_basecolor.png
+
+@EndActorData
+0.000000
+-1.000000
+0.000000
+0.000000
+trimesh
+1
+@EndActor
+@Actor
+@ActorData
+test
+ring_ruin.obj
+basic
+grid_001.png
+
+@EndActorData
+0.000000
+0.000000
+0.000000
+0.000000
+trimesh
+1
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+19.030481
+0.364227
+19.052473
+1.000000
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+21.077045
+0.364227
+-20.194925
+1.000000
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+23.685188
+0.364227
+32.052395
+1.000000
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+78.248077
+8.942382
+-32.052395
+1.000000
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+85.723839
+0.364227
+12.692075
+1.000000
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+89.374390
+0.364227
+9.479272
+1.000000
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-31.786945
+0.364227
+-18.753546
+1.000000
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.120604
+0.364227
+30.430964
+1.000000
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+24.559649
+0.364227
+28.207914
+1.000000
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-31.360165
+0.364227
+31.104485
+1.000000
+sphere
+1.000000
+0
+@EndActor
+{
+    "entities": {
+        "help": {
+            "class": "WorldText",
+            "font_size": 8,
+            "offset": 1,
+            "position": [
+                272.0,
+                32.0
+            ],
+            "text": "Bounce off\n  of the wall"
+        },
+        "hole": {
+            "class": "Hole",
+            "position": [
+                56.0,
+                40.0
+            ]
+        },
+        "player": {
+            "class": "Ball",
+            "position": [
+                212.03387451171875,
+                213.76161193847656
+            ]
+        }
+    },
+    "level": 2
+}
+@Actor
+@ActorData
+player
+sphere.obj
+basic
+
+
+@EndActorData
+0.000000
+0.000000
+0.000000
+1.000000
+kinematic
+sphere
+1.000000
+2
+@EndActor
+@Actor
+@ActorData
+room
+test_room.gltf
+basic
+brick_02/bricks_basecolor.png
+
+@EndActorData
+0.000000
+-1.000000
+0.000000
+0.000000
+static
+trimesh
+1
+@EndActor
+@Actor
+@ActorData
+test
+ring_ruin.obj
+basic
+grid_001.png
+
+@EndActorData
+0.000000
+0.000000
+0.000000
+0.000000
+static
+trimesh
+1
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-15.379029
+0.364226
+28.399435
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+24.187553
+0.364227
+18.371428
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-22.534883
+0.364227
+32.050037
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-19.569204
+0.364227
+28.325533
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-20.727018
+0.364227
+-32.027473
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+13.237918
+0.364226
+-24.357143
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-26.264788
+0.364227
+-3.725105
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.343111
+0.364220
+-18.247673
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054447
+0.364226
+30.052183
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+80.521477
+0.364226
+30.574160
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-23.301796
+0.364227
+-12.256952
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+0.373375
+0.364226
+16.238449
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-6.171269
+0.364226
+23.183043
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.059402
+0.364226
+-14.511181
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+2.726535
+0.364226
+23.046421
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+36.225155
+0.364227
+-5.760597
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-7.291216
+0.364226
+25.681736
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-16.435234
+0.364227
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-11.062178
+0.364226
+24.734877
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+13.904979
+0.364226
+-27.612301
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-16.882576
+0.364226
+24.664268
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-1.178349
+0.364226
+-26.108849
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+84.181320
+0.364227
+4.547175
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-22.977911
+0.364227
+-14.835906
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-19.019983
+0.364225
+18.512274
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-27.503820
+0.364226
+-10.717021
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+6.869072
+0.364226
+20.711073
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+6.894491
+0.364227
+-23.728981
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+1.060179
+0.364226
+-21.209972
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054447
+0.364226
+-23.310789
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-17.923748
+0.364226
+20.353933
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-26.253260
+0.364227
+-30.279814
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+9.302364
+0.364227
+-32.054440
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-0.578538
+0.364226
+-24.123606
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+1.659686
+0.364227
+12.050015
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-5.855116
+0.364226
+28.862906
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-19.490402
+0.364227
+30.328400
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.980740
+0.364227
+-24.998146
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-31.695892
+0.364227
+1.252660
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-22.062809
+0.364226
+-30.167835
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-0.009949
+0.364227
+29.680920
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-12.548255
+0.364227
+-16.089823
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-13.579497
+0.364227
+-30.167442
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.205515
+0.364226
+24.942738
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-24.601398
+0.364226
+14.208170
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.116716
+0.364226
+-18.515646
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-26.479805
+0.364227
+30.270393
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-8.533068
+0.364220
+-29.977024
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.010313
+0.364226
+28.938147
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+9.262081
+0.364226
+-29.781929
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+1.433264
+0.364227
+-29.813402
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+21.773510
+0.364227
+23.333355
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.245945
+0.364226
+22.809492
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-5.776540
+1.194895
+0.327049
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-4.603409
+0.364227
+-32.049164
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+3.276711
+0.364226
+-23.103428
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-12.547966
+0.364226
+-26.160965
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-25.985525
+0.364226
+-22.954279
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+12.112188
+0.364227
+21.325722
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+16.883492
+0.364226
+32.053490
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+21.124537
+0.364227
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+3.578936
+0.364226
+29.685547
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.094328
+0.364226
+25.901844
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.053930
+0.364226
+32.054455
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-6.533660
+0.364226
+-29.865040
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.053596
+0.364227
+-17.674356
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+3.431283
+0.364227
+-31.369061
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-5.177756
+0.364226
+-26.511288
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-12.226521
+0.364226
+23.013155
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-19.900110
+0.364227
+-19.305618
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-27.449627
+0.364226
+-26.521946
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-26.905228
+0.364226
+-12.729073
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.167208
+0.364226
+-0.115075
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-24.556648
+0.364227
+-28.607185
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+12.337294
+0.364227
+28.967508
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-4.394941
+0.364227
+-24.596197
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-1.804395
+0.364226
+-21.810505
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-17.485977
+0.364227
+30.302362
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-27.826603
+0.364226
+1.754468
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-17.618887
+0.364226
+-16.564505
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+8.421150
+0.364226
+-20.994951
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+11.418313
+0.364226
+-23.417288
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+6.805747
+0.364227
+28.287786
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.124535
+0.364227
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+33.076828
+0.364226
+0.569889
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+7.302143
+0.364226
+-32.054455
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054455
+0.364226
+26.052166
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-13.990965
+0.364227
+-22.169376
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054451
+0.364227
+-13.674368
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-19.538324
+0.364227
+-24.979454
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+6.408406
+2.818190
+0.361471
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-29.170961
+0.364227
+-24.123755
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-16.698689
+0.364226
+-32.054455
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+11.749917
+0.364227
+23.305201
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+2.048779
+0.364218
+-27.456381
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.051170
+0.364227
+30.054459
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+53.896667
+0.364227
+7.039939
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+22.990921
+0.364153
+9.274831
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+5.426343
+0.364226
+-17.403055
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-2.549666
+0.364226
+-23.784325
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+11.472516
+0.364227
+-29.986088
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-18.921354
+0.364227
+-21.050016
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+16.932121
+0.364226
+12.788900
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-8.101987
+0.364226
+27.545824
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+2.236725
+0.364226
+25.348709
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+20.494118
+0.364227
+-28.086382
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+24.987452
+0.364226
+-28.062462
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.260513
+0.364226
+-8.463107
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+13.845651
+0.364227
+22.822453
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-21.509892
+0.364227
+30.327408
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-27.331079
+0.364227
+-32.031410
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+2.510708
+0.364226
+20.146173
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+7.217097
+0.364226
+18.667034
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+22.659330
+0.364226
+-14.009258
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-21.167820
+0.364227
+-13.832931
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-23.296453
+0.364226
+-23.893244
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-25.226549
+0.364227
+-21.103872
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+35.353043
+0.364218
+3.831669
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+2.379551
+0.364226
+16.253616
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+52.664482
+0.364227
+32.026745
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054451
+0.364226
+-29.219090
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+15.149099
+0.364227
+26.712931
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.053169
+0.364227
+22.052135
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+50.453518
+0.364227
+6.467568
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+2.768842
+0.364226
+-25.460178
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-2.538078
+0.364226
+-29.893682
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+22.957529
+0.364226
+-27.591063
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+32.204929
+0.364219
+-1.283602
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-2.578409
+0.364226
+-32.053978
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+29.244038
+0.364227
+0.402435
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+4.431864
+0.364226
+16.589401
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+2.303562
+9.990912
+0.327056
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+10.143736
+0.364225
+6.921815
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+21.408428
+0.364226
+26.628874
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.341278
+0.364227
+26.965439
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+69.502838
+0.364227
+1.515814
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-2.184075
+0.364227
+24.397760
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+17.746620
+0.364226
+-24.674492
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-20.656693
+0.364226
+-26.637609
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+2.678841
+0.364227
+31.471693
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.866047
+0.364226
+-20.178484
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-16.189077
+0.364227
+-14.265117
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-21.488651
+0.364226
+27.722662
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054447
+0.364227
+24.052132
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.276310
+0.364237
+-18.759361
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+23.497326
+0.364227
+21.815289
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-23.838171
+0.364227
+-8.522563
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+0.765587
+0.364227
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-12.003600
+0.364226
+26.804321
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-14.695111
+0.364226
+-28.395741
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+9.428270
+0.364226
+11.984571
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-25.575434
+0.364227
+32.054451
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+3.392948
+0.364226
+-20.367163
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-24.103842
+0.364226
+30.699638
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-29.934473
+0.364226
+23.923767
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-29.325466
+0.364226
+-22.129526
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-5.795170
+0.364226
+-19.356131
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-2.681408
+0.364226
+18.933718
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.051891
+0.364227
+28.052179
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-24.791998
+0.364227
+-13.992795
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+31.595095
+0.364224
+1.975340
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-7.513804
+0.364226
+29.999939
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-15.998671
+0.364226
+26.487848
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+17.921793
+0.364227
+30.331167
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+17.768156
+0.364226
+24.591619
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-22.726887
+0.364227
+-32.054455
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+34.327148
+0.364226
+-1.000857
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+34.967415
+0.364215
+-4.205723
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-21.879662
+0.364226
+15.198230
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+0.060813
+0.364227
+-27.689455
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-25.016508
+0.364227
+28.906977
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-16.269995
+0.364227
+18.779266
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+1.472889
+0.364227
+-32.052288
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-18.469923
+0.364226
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-27.062471
+0.364227
+-0.426212
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-14.270375
+0.364227
+22.596914
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+20.196226
+0.364227
+13.868347
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-14.784122
+0.364226
+20.651844
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-15.953659
+0.364227
+-17.672218
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-3.164138
+0.364227
+31.338249
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-20.128880
+0.364226
+26.256027
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-6.338862
+0.364226
+-24.098251
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-22.547476
+0.364227
+17.182240
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-4.337911
+0.364227
+20.073252
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+37.900028
+0.364227
+-4.184704
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-10.195166
+0.364227
+-28.862421
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+22.824011
+0.364226
+-25.596043
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+18.571320
+0.364227
+-21.770565
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+30.631210
+0.364223
+-2.546351
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+36.111778
+0.364227
+-2.564961
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054047
+0.364226
+-15.674361
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+35.701763
+0.364220
+-7.690881
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+19.134897
+0.364225
+-26.333731
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-22.713751
+0.364227
+-27.830198
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-20.689819
+0.364226
+-15.781530
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+4.949431
+0.364226
+-24.199884
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+5.612596
+0.364226
+24.238482
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+11.435051
+0.364226
+25.979481
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+32.120354
+0.363620
+6.936551
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-17.706387
+0.364227
+-19.001160
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+38.574600
+0.364227
+0.267180
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-31.726513
+0.364227
+13.311229
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054451
+0.364227
+17.890203
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-18.705853
+0.364226
+-28.574244
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054256
+0.364227
+32.053577
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+14.881431
+0.364226
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+31.193148
+0.364221
+4.142488
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-7.035708
+0.364227
+31.954348
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-14.613111
+0.364226
+-32.054039
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+20.953478
+0.364226
+-24.691580
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.108692
+0.364226
+-16.510820
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+23.375048
+0.364226
+27.102545
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-1.916432
+0.364226
+-27.990210
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+17.034143
+0.364227
+-26.543255
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-14.180908
+0.364227
+32.047188
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-12.606719
+0.364226
+-32.032326
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+20.047480
+0.364226
+30.369173
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+8.592240
+0.364226
+32.038574
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-11.519551
+0.364227
+28.975439
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-23.130302
+0.364227
+-16.969549
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+13.732511
+0.364227
+25.115877
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-18.699379
+0.364227
+-32.054455
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+33.275600
+0.364086
+-2.990957
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-0.966841
+0.364227
+-18.715023
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-18.136087
+0.364226
+26.448999
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+20.253613
+0.364193
+10.320422
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-0.471223
+0.364226
+13.865302
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.043842
+0.364227
+-31.565042
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+0.336027
+10.374996
+0.327746
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-6.150436
+0.364227
+21.165468
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+1.237390
+0.364226
+21.690405
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.124546
+0.364226
+-24.104145
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+3.663482
+0.364226
+18.476934
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-7.418718
+0.364226
+-25.782763
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+3.994411
+0.364226
+14.635727
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-3.578949
+0.364226
+16.864939
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-24.037107
+0.364226
+25.033676
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+5.601901
+0.364227
+26.272705
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-23.182598
+0.364208
+22.352551
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.279791
+0.364226
+-16.750444
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-10.456789
+0.364226
+-10.944283
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+17.292480
+0.364226
+26.582253
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+14.807853
+0.364227
+-25.813120
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-18.885839
+0.364226
+24.530565
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+8.687303
+0.364227
+27.253288
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.057484
+0.364227
+25.938452
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.049505
+0.364227
+28.054455
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-23.293234
+0.364226
+-21.893225
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+5.408978
+0.364227
+-31.039953
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+0.794690
+0.364227
+-25.781425
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-11.677182
+0.364227
+18.429993
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-10.697970
+0.364226
+-26.920937
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-17.411749
+0.364227
+-24.842394
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-21.535141
+0.364226
+-24.840843
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+4.446078
+8.631903
+0.361174
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+22.613020
+0.364226
+29.973782
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-1.178776
+0.364226
+31.581661
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-6.797315
+0.364227
+-27.693308
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-4.536399
+0.364226
+-29.977564
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.124538
+0.364226
+28.133215
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-11.283157
+0.364226
+-24.516897
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-25.330944
+0.364227
+-32.054455
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+6.592262
+0.364226
+32.054317
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+15.915905
+0.364226
+-23.817795
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-20.779394
+0.364226
+-28.633894
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+38.150093
+0.364227
+3.905887
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-26.503349
+0.364226
+-15.330739
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+15.754548
+0.364226
+24.806713
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-25.219896
+0.364226
+-11.545747
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-31.862648
+0.364226
+20.051359
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+24.961103
+0.364227
+-32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+6.008945
+0.364227
+-27.092821
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+23.365332
+0.364227
+24.788713
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-1.876995
+0.364227
+12.261360
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-23.604338
+0.364226
+-19.917490
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+5.296068
+0.363388
+0.343337
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-16.369663
+0.364226
+-26.618439
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+23.120331
+0.364227
+-29.857779
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-10.606876
+0.364226
+30.817612
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+24.628801
+0.364227
+30.079643
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+5.031395
+0.364226
+-22.059511
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+18.936916
+0.364226
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-31.582125
+0.364226
+7.440940
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+27.125635
+0.362711
+6.974188
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.506760
+0.364227
+-27.952312
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-24.028929
+0.364227
+-30.536308
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-3.915864
+0.364226
+-28.063667
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-24.846622
+0.364227
+-18.350008
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-3.176723
+0.364199
+-26.190378
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-23.839180
+0.364227
+27.182827
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+6.226974
+0.364086
+5.499329
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+30.334839
+0.364227
+-6.237110
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-6.603406
+0.364226
+-32.054451
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+30.315271
+0.364198
+8.407009
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-4.190144
+0.364227
+22.769114
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+11.716324
+0.364226
+-25.679375
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-15.543155
+0.364227
+-24.128477
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-21.526949
+0.364226
+-22.835726
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+21.119974
+0.364227
+-30.046783
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+24.768673
+0.364226
+-26.072639
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+13.000495
+0.364226
+18.755564
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.546703
+0.364226
+18.219149
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.231607
+0.364227
+-14.235168
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+4.651111
+0.364226
+22.483675
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-29.799374
+0.364226
+2.219004
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-14.880262
+0.364226
+24.656132
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+20.830090
+0.364227
+-32.053055
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+36.713112
+0.364227
+-0.504780
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-19.694843
+0.364227
+-30.314331
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+33.844875
+0.364227
+2.422978
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.950600
+0.364226
+20.195814
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+1.408560
+0.364226
+-23.877710
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+13.314761
+0.364226
+-32.054184
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-16.410313
+0.364227
+22.578279
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+7.068632
+0.364227
+22.860245
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-19.596722
+0.364226
+-11.252004
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.338224
+0.364226
+-16.232843
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+7.267701
+0.364226
+-29.592878
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054447
+0.364221
+-19.674574
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.041840
+0.364226
+4.935554
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+12.282529
+0.364201
+9.551139
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+18.743843
+0.364226
+28.507706
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+19.083435
+0.364226
+-31.064215
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+11.943503
+0.364227
+-28.003912
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.114695
+0.364227
+-22.079237
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-21.615978
+0.364226
+-18.276634
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+9.588060
+0.364227
+-25.301138
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+1.786843
+0.364227
+28.783083
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-4.703007
+8.349221
+0.361140
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-4.143391
+0.364226
+14.611588
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+15.326955
+0.364226
+-32.054207
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-2.133326
+0.364226
+15.030259
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-16.929369
+0.364227
+-20.867342
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-14.523566
+0.364226
+-25.849070
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-26.566496
+0.364228
+-17.329647
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.244717
+0.364227
+-30.070484
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+7.453837
+0.364227
+13.769192
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.174471
+0.364226
+-14.752613
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-12.538882
+0.364226
+-28.384634
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-12.180923
+0.364226
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-23.433601
+0.364227
+-25.942513
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-11.581369
+0.364227
+-30.307121
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-20.865732
+0.364226
+24.205587
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-26.857704
+0.364226
+-19.628878
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-21.216959
+0.364227
+21.706182
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-17.694841
+0.364226
+-30.320158
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+7.986112
+0.364226
+-27.431391
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+10.394270
+0.364226
+31.170626
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-8.602174
+0.364227
+-31.976608
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+58.610733
+0.364227
+8.804293
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+18.083860
+0.364227
+-29.258568
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-27.799246
+0.364227
+16.059692
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+5.554704
+0.364226
+30.054104
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+37.838749
+0.364227
+-7.098584
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+63.911335
+0.364227
+-0.132362
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-5.316496
+0.364226
+-16.910521
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+15.647990
+0.364227
+30.207182
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-16.685602
+0.364226
+-28.593431
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+4.009882
+0.364226
+-27.028595
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-23.019449
+0.364227
+29.015404
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-13.384231
+0.364226
+28.252157
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+40.772358
+0.364227
+-7.398010
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-13.721738
+0.364226
+18.924210
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-15.313020
+0.364227
+30.398386
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-10.600941
+0.364226
+-32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-13.297792
+0.364226
+-24.068388
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+13.176799
+0.364227
+27.061388
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-20.784822
+0.364132
+13.188104
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+9.231541
+0.364227
+29.213072
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+9.950913
+0.364226
+-27.804892
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-9.033403
+0.364227
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-9.524859
+0.364226
+29.122915
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-8.322094
+0.364227
+-23.669729
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-14.528284
+0.364226
+-15.779207
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-5.223874
+0.364227
+-22.419363
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+16.650442
+0.364227
+28.476456
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+10.686337
+0.364226
+27.836216
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+15.032039
+0.364226
+18.422434
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.123848
+0.364227
+-30.059498
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-25.982466
+0.364227
+25.512964
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-19.455824
+0.364227
+-17.355473
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-20.501091
+0.364227
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-3.864167
+0.364226
+28.637304
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+18.672567
+0.364227
+-19.045464
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-0.560754
+0.364227
+-29.592102
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-18.369621
+0.364226
+-26.602606
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+33.319946
+0.364227
+-5.339666
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-27.213488
+0.364226
+-24.535910
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-27.410885
+0.364227
+-21.551292
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-25.278263
+0.364227
+-26.741863
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-2.723619
+0.364227
+21.341194
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+42.003078
+0.364227
+10.053557
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-29.991896
+0.364226
+-32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-26.405308
+0.364226
+27.467762
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+14.078127
+0.364226
+20.786301
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+20.422863
+0.364227
+24.876324
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-22.214464
+0.364226
+25.857872
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+23.124537
+0.364226
+32.053825
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+19.404495
+0.364227
+26.619532
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+20.087408
+0.364226
+-9.131949
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+4.875220
+0.364226
+20.355276
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-0.543832
+0.364227
+-32.043320
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.278076
+0.364226
+-12.753171
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+33.333290
+0.364221
+4.369104
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+16.009903
+0.364226
+-30.170877
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+7.543794
+0.364226
+30.292154
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-16.214224
+0.364226
+4.088441
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+13.150211
+0.364227
+3.475382
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+34.940479
+0.364220
+6.649963
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.040867
+0.364226
+21.914349
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-1.986464
+0.364227
+29.374506
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-17.220068
+0.364227
+-22.849262
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+23.350679
+0.364227
+11.255117
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+33.693798
+0.364225
+-7.708353
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-31.221329
+0.364226
+-21.492577
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-15.576284
+0.364227
+-30.295921
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+31.531624
+0.364223
+-4.411241
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+29.265169
+0.364227
+6.636529
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+22.034124
+0.364227
+-21.235432
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+3.306281
+0.364226
+-29.016428
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-0.186356
+0.364226
+11.181451
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+8.828355
+0.364227
+24.299576
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+19.220785
+0.364226
+16.174093
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-29.700899
+0.364226
+-10.836127
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+23.922714
+0.364227
+-20.202583
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+0.592803
+0.364226
+-5.499362
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+57.485443
+0.364227
+-6.059031
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-26.532829
+0.364227
+-28.299442
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.253094
+0.364227
+-30.253561
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.532667
+0.364227
+-28.273193
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+11.303259
+0.364227
+-32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.478655
+0.364227
+-2.012180
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+10.982128
+0.362671
+4.147248
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-28.316204
+0.364227
+31.063152
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+13.604767
+0.364226
+30.514866
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-31.963160
+0.364226
+-11.675920
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+17.342566
+0.364227
+-32.053047
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-10.006149
+0.364226
+26.927656
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+4.343900
+0.364227
+27.827787
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+69.703812
+0.364227
+-0.491530
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.114769
+0.364226
+-9.726704
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-25.103901
+0.364227
+-24.749479
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-6.414411
+4.183852
+0.345020
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-5.851546
+6.622977
+0.344298
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-31.966070
+0.364227
+-4.848104
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+15.866480
+0.364226
+-28.174721
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-26.379299
+0.364226
+23.545309
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-14.795257
+0.364226
+-19.302588
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-19.439379
+0.364227
+-22.981831
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+14.467008
+0.364226
+28.593065
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+20.916685
+0.364226
+28.567913
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-17.376637
+0.364226
+28.299295
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-19.182331
+0.364227
+21.973928
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-3.972029
+0.364221
+-20.546057
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+23.152771
+0.364226
+-23.298134
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.057644
+0.364226
+12.324314
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-9.384677
+0.364226
+-25.412523
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-17.838116
+0.364227
+5.512730
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+13.474182
+0.364227
+-29.889671
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+4.592172
+0.364226
+32.054451
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+5.306311
+0.364226
+-28.972717
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-21.166555
+0.364226
+-20.865562
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-13.077923
+0.364227
+30.261763
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+18.140079
+0.364226
+22.588444
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+12.254424
+0.364227
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054348
+0.364227
+-9.678009
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+22.950977
+0.364227
+-31.886587
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.124535
+0.364226
+20.331757
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+25.120155
+0.364227
+23.300043
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-1.494237
+0.364226
+17.039557
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+20.227198
+0.364226
+21.958792
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-32.054443
+0.364227
+-26.685511
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-29.433039
+0.364227
+-26.264883
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-5.038106
+0.364226
+32.054447
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor
+@Actor
+@ActorData
+ball
+sphere.obj
+basic
+UVgrid.png
+
+@EndActorData
+-30.298206
+0.364227
+-3.417555
+1.000000
+dynamic
+sphere
+1.000000
+0
+@EndActor

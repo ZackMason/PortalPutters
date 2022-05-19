@@ -1,0 +1,151 @@
+{
+    "gravity" : [0.0, 9.81],
+    "entities": {
+        "hole": {
+            "class": "Hole",
+            "position": [
+                -70.0,
+                -350.0
+            ]
+        },
+        "player": {
+            "class": "Ball",
+            "position": [
+                70.0,
+                -350.0
+            ]
+        },
+        "w1": {
+            "class": "Wall",
+            "position": [
+                250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w2": {
+            "class": "Wall",
+            "position": [
+                -250.0,
+                0.0
+            ],
+            "size": [
+                25.0,
+                850.0
+            ]
+        },
+        "w3": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w4": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -425.0
+            ],
+            "size": [
+                525.0,
+                25.0
+            ]
+        },
+        "w5": {
+            "class": "Wall",
+            "position": [
+                75.0,
+                -225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w7": {
+            "class": "Wall",
+            "position": [
+                -75.0,
+                -225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w8": {
+            "class": "Wall",
+            "position": [
+                -175.0,
+                -25.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w9": {
+            "class": "Wall",
+            "position": [
+                175.0,
+                -25.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w10": {
+            "class": "Wall",
+            "position": [
+                75.0,
+                225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w11": {
+            "class": "Wall",
+            "position": [
+                -75.0,
+                225.0
+            ],
+            "size": [
+                125.0,
+                25.0
+            ]
+        },
+        "w6": {
+            "class": "Wall",
+            "position": [
+                0.0,
+                -50.0
+            ],
+            "size": [
+                25.0,
+                750.0
+            ]
+        },
+        "help": {
+            "class": "WorldText",
+            "position": [
+                120,
+                -370
+            ],
+            "text": "Navigate \n the path",
+            "font_size": 22,
+            "offset": 2
+        }
+    },
+    "level": 4
+}

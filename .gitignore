@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+build/
+web_build.zip

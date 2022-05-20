@@ -14,6 +14,8 @@ struct MainGameHandler : GameEventHandler
         camera.rotation = 0.0f;
         camera.zoom = 1.0f;
         golf_level.load_ldtk(save_file);
+
+        background = LoadTexture((S_ASSETS_PATH + "Sprites/checker.png").c_str());
     }
     explicit MainGameHandler(const std::string& file_name = "")
     {
@@ -42,6 +44,7 @@ struct MainGameHandler : GameEventHandler
         file.close();
     }
     
+    Texture2D background;
     
     Ref<GameEventHandler> tick(f32 dt) override;
 	Ref<GameEventHandler> draw(f32 dt) override;

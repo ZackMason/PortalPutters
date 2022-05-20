@@ -95,23 +95,9 @@ Ref<GameEventHandler> MainGameHandler::draw(f32 dt)
     std::stringstream ss;
     ss << "Camera: < " << camera.target.x << ", " << camera.target.y << " >";
 
-    constexpr int bg_sq_size = 64;
-    constexpr int bg_sq_count = 13;
-    for (int i = 0; i < bg_sq_count; i += 1)
-    {
-        for (int j = 0; j < bg_sq_count; j += 1)
-        {
-            auto x = (2*i + (j%2)) * bg_sq_size;
-            auto y = j * bg_sq_size;
-            DrawRectangle(
-                x, y, 
-                bg_sq_size, bg_sq_size, 
-                Color{0x22, 0xbb, 0x22, 0xff});
-        }
-    }
-    
-    BeginMode2D(camera);
+    DrawTextureTiled(background, {0,0,128,128}, {0,0,(f32)window->width, (f32)window->height}, {0,0},0,1.0,GREEN);
 
+    BeginMode2D(camera);
     
     std::vector<Wall*> walls;
     for (const auto& [name, entity] : golf_level.walls)

@@ -1,29 +1,19 @@
 {
     "entities": {
-        "help": {
-            "class": "WorldText",
-            "font_size": 8,
-            "offset": 1,
-            "position": [
-                272.0,
-                32.0
-            ],
-            "text": "Bounce off\n  of the wall"
-        },
         "hole": {
             "class": "Hole",
             "position": [
-                56.0,
+                392.0,
                 40.0
             ]
         },
         "player": {
             "class": "Ball",
             "position": [
-                212.03387451171875,
-                213.76161193847656
+                345.568603515625,
+                489.645751953125
             ]
         }
     },
-    "level": 2
+    "level": 7
 }

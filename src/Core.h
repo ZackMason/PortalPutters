@@ -88,6 +88,16 @@ bool operator!=(const Vector2& a, const Vector2& b)
 	return !(a==b);
 }
 
+inline Color lerp(const Color& a, const Color& b, const f32 t)
+{
+	return Color{
+		u8(f32(b.r) * t + f32(a.r) * (1.0f - t)),
+		u8(f32(b.g) * t + f32(a.g) * (1.0f - t)),
+		u8(f32(b.b) * t + f32(a.b) * (1.0f - t)),
+		0xff
+	};
+}
+
 template <typename T>
 inline T lerp(T a, T b, f32 t)
 {
@@ -172,12 +182,16 @@ auto& xplat_getline(std::istream& stream, std::string& string)
 template <typename Fn>
 void delay_callback(f32 wait_time, Fn funct )
 {
+#if __EMSCRIPTEN__ && !__EMSCRIPTEN_PTHREADS__
+		funct();
+		return;
+#endif
 	auto t = std::thread([funct, wait_time](){
-		#if __EMSCRIPTEN__
+#if __EMSCRIPTEN__
 		std::this_thread::sleep_for(std::chrono::seconds((int)wait_time));
-		#else
+#else
 		std::this_thread::sleep_for(std::chrono::seconds::duration<f32>(wait_time));
-		#endif
+#endif
 		funct();
 	});
 	t.detach();

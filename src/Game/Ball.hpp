@@ -2,6 +2,8 @@
 
 #include "Entity.hpp"
 
+#include "Util/Timer.hpp"
+
 struct Ball : public PhysicsEntity
 {
     Camera2D& camera;
@@ -23,12 +25,22 @@ struct Ball : public PhysicsEntity
       return startingPosition + n * stepVelocity + 0.5f * (n*n+n) * stepGravity;
     }
 
-    b2Vec2 get_drag_strength()
-    {
-        auto mouse = GetScreenToWorld2D(GetMousePosition(), camera);
+    constexpr f32 max_power() const{
+        return 60.0f;
+    }
 
-        auto power = Vector2Distance(mouse, click_point);
-        auto dir = Vector2Normalize(click_point - mouse);
+    f32 get_drag_strength() const
+    {
+        const auto mouse = GetMousePosition();
+        const auto power = std::clamp(Vector2Distance(mouse, click_point) - 10.f, 0.f, max_power());
+        return power;
+    }
+    b2Vec2 get_drag_vec() const
+    {
+        
+        const auto mouse = GetMousePosition();
+        const auto power = get_drag_strength();
+        const auto dir = Vector2Normalize(click_point - mouse);
         return convert(dir * power * WORLD_TO_BOX);
     }
 
@@ -44,7 +56,7 @@ struct Ball : public PhysicsEntity
         {
             if (!clicked)
             {
-                auto mouse = GetScreenToWorld2D(GetMousePosition(), camera);
+                auto mouse = GetMousePosition();
                 
                 clicked = true;
                 click_point = mouse;
@@ -57,7 +69,8 @@ struct Ball : public PhysicsEntity
             {
                 // hit the ball
 
-                auto shot = get_drag_strength();
+                auto shot = get_drag_vec();
+
                 body->ApplyLinearImpulseToCenter(shot, true);
             }
 
@@ -89,8 +102,27 @@ struct Ball : public PhysicsEntity
         DrawCircle(position.x+1, position.y+1, radius, GRAY);
         if (dragging)
         {
-            auto g_mouse = GetScreenToWorld2D(GetMousePosition(), camera);
+            auto g_mouse = GetMousePosition();
             auto drag_delta = g_mouse - click_point;
+
+            auto power = get_drag_strength();
+
+            Rectangle rec;
+            rec.x = position.x + 20;
+            rec.y = position.y - 16;
+            rec.width = 8;
+            rec.height = 32;
+
+            DrawRectangleRounded(rec, 0.25f, 2, BLACK);
+
+            rec.x++;
+            rec.y++;
+            rec.width -= 2;
+            rec.height -= 2;
+            DrawRectangleRounded(rec, 0.25f, 2, WHITE);
+            rec.height *= power / max_power();
+            rec.y += (1.0f - power / max_power()) * 30;
+            DrawRectangleRounded(rec, 0.25f, 2, lerp(YELLOW, RED, power / max_power()));
 
 
             Vector2 one = {1.0f, 1.0f};
@@ -102,7 +134,7 @@ struct Ball : public PhysicsEntity
 
             for (int i = 0; i < -180; i += 30)
             {
-                b2Vec2 trajectoryPosition = getTrajectoryPoint( body->GetPosition(), body->GetLinearVelocity() + get_drag_strength(), i);
+                b2Vec2 trajectoryPosition = getTrajectoryPoint( body->GetPosition(), body->GetLinearVelocity() + get_drag_vec(), i);
                 DrawCircleV(convert(trajectoryPosition) * BOX_TO_WORLD, 4, WHITE);
             }
         }
@@ -126,16 +158,19 @@ struct Ball : public PhysicsEntity
         b2BodyDef bodyDef;
         bodyDef.type = b2_dynamicBody;
         bodyDef.position.Set(position.x * WORLD_TO_BOX, position.y * WORLD_TO_BOX);
+        bodyDef.allowSleep = false;
+
         body = world.CreateBody(&bodyDef);
 
-        b2Shape* shape = new b2CircleShape();
-        ((b2CircleShape*)shape)->m_radius = radius * WORLD_TO_BOX;
+        b2CircleShape shape;
+        shape.m_radius = radius * WORLD_TO_BOX;
 
         b2FixtureDef fixtureDef;
         fixtureDef.density = 1.0f;
         fixtureDef.friction = 0.4f;
         fixtureDef.restitution = 0.60f;
-        fixtureDef.shape = shape;
+        
+        fixtureDef.shape = &shape;
 
         body->CreateFixture(&fixtureDef);
         

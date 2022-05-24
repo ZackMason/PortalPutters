@@ -4,6 +4,7 @@
 #include "Game/Hole.hpp"
 #include "Game/Wall.hpp"
 
+#include "Util/Timer.hpp"
 #include <thread>
 
 bool MainGameHandler::load(const std::string& filename)
@@ -56,8 +57,8 @@ void camera_zoom(Camera2D& camera)
 Ref<GameEventHandler> MainGameHandler::tick(f32 dt)
 {
 
-
-    golf_level.world.Step(1.0f / 60.0f, 6, 2);
+    for (auto i = 0; i < 3; i++)
+        golf_level.world.Step(1.0f / 60.0f / 3.0f, 8, 1);
 
     for (const auto& [name, entity] : golf_level.walls)
         entity->update(dt);
@@ -72,13 +73,10 @@ Ref<GameEventHandler> MainGameHandler::tick(f32 dt)
         Ball* player = reinterpret_cast<Ball*>(golf_level.entities["player"].get());
         player->body->SetLinearVelocity({0,0});
 
-    #if !__EMSCRIPTEN__
-        delay_callback(2.0f, [this](){
-    #endif
+
+        CallbackTimer::create(2.0f, [this](){
             this->level_complete = true;
-    #if !__EMSCRIPTEN__
         });
-    #endif
     }
 
     return nullptr;
@@ -95,15 +93,22 @@ Ref<GameEventHandler> MainGameHandler::draw(f32 dt)
     std::stringstream ss;
     ss << "Camera: < " << camera.target.x << ", " << camera.target.y << " >";
 
-    DrawTextureTiled(background, {0,0,128,128}, {0,0,(f32)window->width, (f32)window->height}, {0,0},0,1.0,GREEN);
+    //DrawTextureTiled(background, {0,0,128,128}, {0, 0,(f32)window->width, (f32)window->height}, {0,0},0,1.0,GREEN);
 
     BeginMode2D(camera);
+
+    
+    auto bx = camera.target.x - window->width/2.0f;
+    auto by = camera.target.y - window->height/2.0f;
+    bx = std::round(bx / 128.0f) * 128.0f;
+    by = std::round(by / 128.0f) * 128.0f;
+
+    DrawTextureTiled(background, {0,0,128,128}, {bx, by,(f32)window->width, (f32)window->height}, {0,0},0,1.0,GREEN);
     
     std::vector<Wall*> walls;
     for (const auto& [name, entity] : golf_level.walls)
         walls.push_back(entity.get());
-    std::sort(walls.begin(),
-            walls.end(),
+    std::sort(walls.begin(), walls.end(),
             [](Wall* a, Wall* b) { 
                 return a->position.y + a->size.y < b->position.y + a->size.y;
             });
@@ -111,27 +116,6 @@ Ref<GameEventHandler> MainGameHandler::draw(f32 dt)
         wall->render(dt);
     for (const auto& [name, entity] : golf_level.entities)
         entity->render(dt);
-
-#if 1
-    int bodiesCount = GetPhysicsBodiesCount();
-    for (int i = 0; i < bodiesCount; i++)
-    {
-        PhysicsBody body = GetPhysicsBody(i);
-
-        int vertexCount = GetPhysicsShapeVerticesCount(i);
-        for (int j = 0; j < vertexCount; j++)
-        {
-            // Get physics bodies shape vertices to draw lines
-            // Note: GetPhysicsShapeVertex() already calculates rotation transformations
-            Vector2 vertexA = GetPhysicsShapeVertex(body, j);
-
-            int jj = (((j + 1) < vertexCount) ? (j + 1) : 0);   // Get next vertex or first to close the shape
-            Vector2 vertexB = GetPhysicsShapeVertex(body, jj);
-
-            DrawLineV(vertexA, vertexB, GREEN);     // Draw a line between two vertex positions
-        }
-    }
-#endif
 
     EndMode2D();
 

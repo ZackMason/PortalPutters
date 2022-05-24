@@ -7,6 +7,7 @@
 #include "Hole.hpp"
 #include "Coin.hpp"
 #include "WorldText.hpp"
+#include "PhysicsBox.hpp"
 
 #include "box2d/box2d.h"
 
@@ -52,27 +53,35 @@ struct GolfLevel : Serializable
                 for (auto& entity : layer_entities)
                 {
                     json j;
+                    j["position"] = entity["px"].get<std::array<f32, 2>>();
 
                     if (entity["__identifier"] == "Player")
                     {
                         entities["player"] =(CreateUnique<Ball>(camera, world));
-                        j["position"] = entity["px"].get<std::array<f32, 2>>();
                         entities["player"]->load(j);
                     }
                     else if (entity["__identifier"] == "Wall")
                     {
                         std::string name = std::to_string(walls.size());
                         walls[name] =(CreateUnique<Wall>(world));
-                        j["position"] = entity["px"].get<std::array<f32, 2>>();
                         j["size"] = std::array<f32,2>{entity["width"].get<f32>(), entity["height"].get<f32>()};
                         j["position"][0] = j["position"][0].get<f32>() + j["size"][0].get<f32>()/2;
                         j["position"][1] = j["position"][1].get<f32>() + j["size"][1].get<f32>()/2;
                         walls[name]->load(j);
                     }
+                    else if (entity["__identifier"] == "PhysicsBox")
+                    {
+                        static int box_count = 0;
+                        std::string name = "box" + std::to_string(box_count++);
+                        entities[name] =(CreateUnique<PhysicsBox>(world));
+                        j["size"] = std::array<f32,2>{entity["width"].get<f32>() - 2, entity["height"].get<f32>() - 2};
+                        j["position"][0] = j["position"][0].get<f32>() + j["size"][0].get<f32>()/2;
+                        j["position"][1] = j["position"][1].get<f32>() + j["size"][1].get<f32>()/2;
+                        entities[name]->load(j);
+                    }
                     else if (entity["__identifier"] == "Hole")
                     {
                         entities["hole"] = (CreateUnique<Hole>());
-                        j["position"] = entity["px"].get<std::array<f32, 2>>();
                         entities["hole"]->load(j);
                     }
                     //else if (entity["__identifier"] == "Coin")
@@ -83,7 +92,6 @@ struct GolfLevel : Serializable
                     else if (entity["__identifier"] == "WorldText")
                     {
                         std::string name;
-                        j["position"] = entity["px"].get<std::array<f32, 2>>();
                         for (auto field : entity["fieldInstances"])
                         {
                             if (field["__identifier"] == "name")
@@ -101,6 +109,16 @@ struct GolfLevel : Serializable
                 }
             }
         }
+
+        using namespace std::string_literals;
+        for (const auto& name : {"player"s, "hole"s})
+        {
+            if (entities.count(name) == 0)
+            {
+                throw std::runtime_error("Level does not contain: " + name);
+            }
+        }
+
     }
 
     void load_custom(json& save_file)

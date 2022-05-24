@@ -2,39 +2,30 @@
 
 #include "Entity.hpp"
 
-struct Wall : PhysicsEntity
+struct PhysicsBox : PhysicsEntity
 {
     Vector2 size = {100.0f, 100.0f};
     f32 rotation = 0.f;
     Color color = RAYWHITE;// Color{0xaa, 0xaa, 0xff, 0xff};
     b2World& world;
 
-    bool contains(const Vector2& point, f32 radius)
-    {
-        Rectangle rec;
-        rec.x = position.x - size.x/2;
-        rec.y = position.y - size.y/2;
-        rec.width = size.x;
-        rec.height = size.y;
-        return CheckCollisionCircleRec(point, radius, rec);
-    }
-
-
     void render(f32 dt) override {
         Rectangle rec;
-        rec.x = position.x - size.x/2;
-        rec.y = position.y - size.y/2;
+        rec.x = position.x;
+        rec.y = position.y;
         rec.width = size.x;
         rec.height = size.y;
 
-        rec.y += 5.0f;
-        DrawRectangleRounded(rec, 0.25f, 2, BLACK);
-        rec.y -= 5.0f;
-        DrawRectangleRounded(rec, 0.25f, 2, color);
+        DrawRectanglePro(rec, {rec.width/2, rec.height/2}, body->GetAngle() * 180.0f / 3.1415f, color);
+        return;
+
+        //rec.y += 5.0f;
+        //DrawRectangleRounded(rec, 0.25f, 8, BLACK);
+        //rec.y -= 5.0f;
+        DrawRectangleRounded(rec, 0.25f, 8, color);
         
     }
     void save(json& save_file) override {
-        save_file["class"] = "Wall";
         save_file["position"] = { position.x , position.y };
         save_file["size"] = { size.x , size.y };
     }
@@ -50,6 +41,7 @@ struct Wall : PhysicsEntity
     {
         b2BodyDef bodyDef;
         bodyDef.position.Set(position.x * WORLD_TO_BOX, position.y * WORLD_TO_BOX);
+        bodyDef.type = b2_dynamicBody;
         body = world.CreateBody(&bodyDef);
 
         b2PolygonShape shape;
@@ -57,14 +49,14 @@ struct Wall : PhysicsEntity
 
         b2FixtureDef fixtureDef;
         fixtureDef.shape = &shape;
-        fixtureDef.density = 0.0f;
+        fixtureDef.density = 1.0f;
         fixtureDef.friction = 0.96f;
         fixtureDef.restitution = 0.5f;
 
         body->CreateFixture(&fixtureDef);
     }
 
-    Wall(b2World& p_world)
+    PhysicsBox(b2World& p_world)
         : world(p_world)
     {
         

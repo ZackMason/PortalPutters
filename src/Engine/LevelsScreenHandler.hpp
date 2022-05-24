@@ -26,6 +26,11 @@ struct LevelsScreenHandler : public GameEventHandler
     }
 	Ref<GameEventHandler> draw(f32 dt) override
     {
+        static Texture2D background = LoadTexture((S_ASSETS_PATH + "Sprites/checker.png").c_str());
+        DrawTextureTiled(background, {0,0,128,128}, {0,0,(f32)window->width, (f32)window->height}, {0,0},0,1.0,GREEN);
+
+
+
         const auto screen_width = window->width - 6;
         const auto screen_height = window->height;
         

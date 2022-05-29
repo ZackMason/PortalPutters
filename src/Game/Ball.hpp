@@ -32,7 +32,8 @@ struct Ball : public PhysicsEntity
     f32 get_drag_strength() const
     {
         const auto mouse = GetMousePosition();
-        const auto power = std::clamp(Vector2Distance(mouse, click_point) - 10.f, 0.f, max_power());
+        const auto distance = Vector2Distance(mouse, click_point) * 0.25f;
+        const auto power = std::clamp(distance - 10.f, 0.f, max_power());
         return power;
     }
     b2Vec2 get_drag_vec() const
@@ -126,11 +127,13 @@ struct Ball : public PhysicsEntity
 
 
             Vector2 one = {1.0f, 1.0f};
+
+            drag_delta = Vector2Normalize(drag_delta) * std::min(max_power(), power);
             DrawLineEx(position  + one, position + drag_delta + one, 4, BLACK);
-            DrawCircleV(position + drag_delta + one, 2, BLACK);
+            DrawCircleV(position + drag_delta + one, 2.0f, BLACK);
             
             DrawLineEx(position, position + drag_delta , 4, WHITE);
-            DrawCircleV(position + drag_delta, 2, WHITE);
+            DrawCircleV(position + drag_delta, 2.0f, WHITE);
 
             for (int i = 0; i < -180; i += 30)
             {

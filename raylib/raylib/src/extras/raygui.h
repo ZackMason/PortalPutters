@@ -1429,7 +1429,7 @@ void GuiPanel(Rectangle bounds)
 
     // Draw control
     //--------------------------------------------------------------------
-    GuiDrawRectangle(bounds, PANEL_BORDER_WIDTH, Fade(GetColor(GuiGetStyle(DEFAULT, (state == GUI_STATE_DISABLED)? BORDER_COLOR_DISABLED: LINE_COLOR)), guiAlpha),
+    GuiDrawRectangle(bounds, PANEL_BORDER_WIDTH, Fade(GetColor(GuiGetStyle(DEFAULT, (state == GUI_STATE_DISABLED)   ? BORDER_COLOR_DISABLED: LINE_COLOR)), guiAlpha),
                      Fade(GetColor(GuiGetStyle(DEFAULT, (state == GUI_STATE_DISABLED)? BASE_COLOR_DISABLED : BACKGROUND_COLOR)), guiAlpha));
     //--------------------------------------------------------------------
 }

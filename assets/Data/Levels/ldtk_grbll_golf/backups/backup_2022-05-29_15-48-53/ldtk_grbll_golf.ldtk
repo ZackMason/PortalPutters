@@ -594,31 +594,6 @@
 								{ "__identifier": "offset", "__value": 1, "__type": "Int", "__tile": null, "defUid": 12, "realEditorValues": [{ "id": "V_Int", "params": [1] }] },
 								{ "__identifier": "name", "__value": "help", "__type": "String", "__tile": null, "defUid": 13, "realEditorValues": [] }
 							]
-						},
-						{
-							"__identifier": "WorldText",
-							"__grid": [3,5],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": null,
-							"__smartColor": "#D4E2DA",
-							"iid": "681a1030-dbe0-11ec-9378-ddaa78e1b645",
-							"width": 16,
-							"height": 16,
-							"defUid": 8,
-							"px": [48,80],
-							"fieldInstances": [
-								{ "__identifier": "text", "__value": "Middle mouse button\n   or\nTap with four fingers\n to quit", "__type": "String", "__tile": null, "defUid": 10, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["Middle mouse button\n   or\nTap with four fingers\n to quit"]
-								}] },
-								{ "__identifier": "font_size", "__value": 8, "__type": "Int", "__tile": null, "defUid": 11, "realEditorValues": [{ "id": "V_Int", "params": [8] }] },
-								{ "__identifier": "offset", "__value": 1, "__type": "Int", "__tile": null, "defUid": 12, "realEditorValues": [{ "id": "V_Int", "params": [1] }] },
-								{ "__identifier": "name", "__value": "quit_help", "__type": "String", "__tile": null, "defUid": 13, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["quit_help"]
-								}] }
-							]
 						}
 					]
 				}

@@ -10,6 +10,8 @@
 #include "MainGameHandler.hpp"
 #include "LevelsScreenHandler.hpp"
 
+#include "Util/RayUtil.hpp"
+
 Ref<GameEventHandler> MainMenuEventHandler::draw(f32 dt)
 {
 	auto button_width = window->width * 0.35f;
@@ -20,13 +22,14 @@ Ref<GameEventHandler> MainMenuEventHandler::draw(f32 dt)
     DrawTextureTiled(background, {0,0,128,128}, {0,0,(f32)window->width, (f32)window->height}, {0,0},0,1.0,GREEN);
 
 
-	if (GuiButton({ window->width / 2 - button_width/2, window->height / 3.f , button_width, button_height }, "Play"))
-		return CreateRef<MainGameHandler>("");
+	//if (GuiButton({ window->width / 2 - button_width/2, window->height / 3.f , button_width, button_height }, "Play"))
+	//	return CreateRef<MainGameHandler>("");
 	if (GuiButton({ window->width / 2 - button_width/2, window->height / 3 + 15.0f + button_height, button_width, button_height }, "Levels"))
 		return CreateRef<LevelsScreenHandler>();
 
-	DrawText("Grbll Golf", window->width/2 - MeasureText("Grbll Golf", 26)/2, window->height/4, 26, RAYWHITE);
-    
+	//DrawText("Grbll Golf", window->width/2 - MeasureText("Grbll Golf", 26)/2, window->height/4, 26, RAYWHITE);
+	RayUtil::DrawShadowText("Portal Putters", window->width/2, window->height/4, 2, 32, RAYWHITE, RayUtil::TextAlignment::CENTER);
+
 	return nullptr;
 }
 

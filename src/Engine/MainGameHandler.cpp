@@ -5,6 +5,7 @@
 #include "Game/Wall.hpp"
 
 #include "Util/Timer.hpp"
+#include "Util/RayUtil.hpp"
 #include <thread>
 
 bool MainGameHandler::load(const std::string& filename)
@@ -32,8 +33,10 @@ void camera_zoom(Camera2D& camera)
 {
     std::stringstream ss;
 
+    constexpr f32 min_zoom = 3.0f;
+
     auto scroll = GetMouseWheelMove();
-    camera.zoom = std::max(1.0f, camera.zoom - scroll);
+    camera.zoom = std::max(min_zoom, camera.zoom - scroll);
     //std::cout << "scroll: " << scroll << std::endl;
 
     //return;
@@ -46,7 +49,7 @@ void camera_zoom(Camera2D& camera)
     
     if (pinch.x != 0.0f && pinch.y != 0.0f)
     {
-        camera.zoom = std::max(1.0f, camera.zoom - pinch_delta/100.0f);
+        camera.zoom = std::max(min_zoom, camera.zoom - pinch_delta/100.0f);
     }
 
     //DrawText(ss.str().c_str(), 0, 25, 24, WHITE);
@@ -59,6 +62,8 @@ Ref<GameEventHandler> MainGameHandler::tick(f32 dt)
 
     for (auto i = 0; i < 3; i++)
         golf_level.world.Step(1.0f / 60.0f / 3.0f, 8, 1);
+
+    golf_level.update(dt);
 
     for (const auto& [name, entity] : golf_level.walls)
         entity->update(dt);
@@ -90,10 +95,11 @@ Ref<GameEventHandler> MainGameHandler::draw(f32 dt)
     camera.rotation = 0.0f;
 
 
-    std::stringstream ss;
-    ss << "Camera: < " << camera.target.x << ", " << camera.target.y << " >";
+    //std::stringstream ss;
+    //ss << "Camera: < " << camera.target.x << ", " << camera.target.y << " >";
 
     //DrawTextureTiled(background, {0,0,128,128}, {0, 0,(f32)window->width, (f32)window->height}, {0,0},0,1.0,GREEN);
+
 
     BeginMode2D(camera);
 
@@ -112,6 +118,9 @@ Ref<GameEventHandler> MainGameHandler::draw(f32 dt)
             [](Wall* a, Wall* b) { 
                 return a->position.y + a->size.y < b->position.y + a->size.y;
             });
+
+    golf_level.render(dt);
+
     for (const auto& wall : walls)
         wall->render(dt);
     for (const auto& [name, entity] : golf_level.entities)
@@ -120,12 +129,16 @@ Ref<GameEventHandler> MainGameHandler::draw(f32 dt)
     EndMode2D();
 
     DrawFPS(0,0);
-    DrawText(ss.str().c_str(), 0, 25, 24, BLACK);
     
-    const auto level_text_width = MeasureText(TextFormat("Level: %d", golf_level.level), 28);
-    DrawText(TextFormat("Level: %d", golf_level.level), window->width - level_text_width - 16,0,28, RAYWHITE);
+    //DrawText(ss.str().c_str(), 0, 25, 24, BLACK);
+    
+    RayUtil::DrawShadowText(TextFormat("Level: %d", golf_level.level), window->width - 10, 10, 2, 38, RAYWHITE, RayUtil::TextAlignment::RIGHT);
 
-    DrawText(TextFormat("TouchCount: %d", GetTouchPointCount()), 0, 53, 25, RAYWHITE);
+    if (ball_in_hole)
+    {
+        RayUtil::DrawShadowText("  Level\nComplete", window->width/2, window->height/2, 3, 46, YELLOW, RayUtil::TextAlignment::CENTER);
+    }
+    //DrawText(TextFormat("TouchCount: %d", GetTouchPointCount()), 0, 53, 25, RAYWHITE);
 
     return nullptr;
 }

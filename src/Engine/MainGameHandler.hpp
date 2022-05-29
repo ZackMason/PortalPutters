@@ -62,6 +62,7 @@ struct MainGameHandler : GameEventHandler
     bool should_quit() const override { 
         return IsKeyPressed(KEY_ESCAPE) || 
         IsMouseButtonDown(MOUSE_BUTTON_MIDDLE) ||
+        GetTouchPointCount() > 3 ||
         level_complete;
         //Vector2Distance(golf_level.entities["player"].get()->position, golf_level.entities["hole"].get()->position) < 12.0f; 
     };

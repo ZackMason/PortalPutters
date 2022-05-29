@@ -20,7 +20,7 @@ int main()
     SetConfigFlags(FLAG_MSAA_4X_HINT);
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);
     Window window;
-    window.name = "Grbll Golf";
+    window.name = "Portal Putters";
     window.width = config["width"];
     window.height = config["height"];
     window.init();

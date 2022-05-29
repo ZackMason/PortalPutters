@@ -608,16 +608,13 @@
 							"defUid": 8,
 							"px": [48,80],
 							"fieldInstances": [
-								{ "__identifier": "text", "__value": "Middle mouse button\n   or\nTap with four fingers\n to quit", "__type": "String", "__tile": null, "defUid": 10, "realEditorValues": [{
+								{ "__identifier": "text", "__value": "Middle mouse button\n   or\nTap with Four Fingers\n to quit", "__type": "String", "__tile": null, "defUid": 10, "realEditorValues": [{
 									"id": "V_String",
-									"params": ["Middle mouse button\n   or\nTap with four fingers\n to quit"]
+									"params": ["Middle mouse button\n   or\nTap with Four Fingers\n to quit"]
 								}] },
 								{ "__identifier": "font_size", "__value": 8, "__type": "Int", "__tile": null, "defUid": 11, "realEditorValues": [{ "id": "V_Int", "params": [8] }] },
 								{ "__identifier": "offset", "__value": 1, "__type": "Int", "__tile": null, "defUid": 12, "realEditorValues": [{ "id": "V_Int", "params": [1] }] },
-								{ "__identifier": "name", "__value": "quit_help", "__type": "String", "__tile": null, "defUid": 13, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["quit_help"]
-								}] }
+								{ "__identifier": "name", "__value": "help", "__type": "String", "__tile": null, "defUid": 13, "realEditorValues": [] }
 							]
 						}
 					]

@@ -1,7 +1,7 @@
 {
     "C_Cpp.clang_format_path": "/usr/lib/llvm-10/bin/clang-format",
     "C_Cpp.default.includePath": [
-      "~/.conan/data/**"
+      "~/.conan/data/**", "./raylib/raylib/src/"
     ],
     "files.associations": {
       "thread": "cpp",
@@ -115,6 +115,7 @@
       "string_view": "cpp",
       "rope": "cpp",
       "slist": "cpp",
-      "*.m": "cpp"
+      "*.m": "cpp",
+      "hash_map": "cpp"
     }
 }

@@ -7,6 +7,7 @@
 #include "Hole.hpp"
 #include "Coin.hpp"
 #include "WorldText.hpp"
+#include "Portal.hpp"
 #include "PhysicsBox.hpp"
 
 #include "box2d/box2d.h"
@@ -17,8 +18,23 @@ struct GolfLevel : Serializable
     u32 level = 0;
     std::unordered_map<std::string, Unique<Entity>> entities;
     std::unordered_map<std::string, Unique<Wall>> walls;
+    std::unordered_map<std::string, Unique<PortalLink>> portals;
     
     b2World world{{0.0f, 0.0f}};
+
+    void render(f32 dt) {
+        for (auto& [name, portal] : portals)
+        {
+            portal->render(dt);
+        }
+    }
+
+    void update(f32 dt) {
+        for (auto& [name, portal] : portals)
+        {
+            portal->update_portals(dt, (Ball*)entities["player"].get());
+        }
+    }
 
     void save(json& save_file)
     {
@@ -83,6 +99,21 @@ struct GolfLevel : Serializable
                     {
                         entities["hole"] = (CreateUnique<Hole>());
                         entities["hole"]->load(j);
+                    }
+                    else if (entity["__identifier"] == "PortalLink")
+                    {
+                        static int portal_count = 0;
+                        std::string name = "portal" + std::to_string(portal_count++);
+                        portals[name] = (CreateUnique<PortalLink>());
+                        for (auto field : entity["fieldInstances"])
+                        {
+                            if (field["__identifier"] == "dest")
+                            {
+                                j["dest"][0] = field["__value"]["cx"].get<float>() * 16.0f + 8.0f;
+                                j["dest"][1] = field["__value"]["cy"].get<float>() * 16.0f + 8.0f;
+                            }
+                        }
+                        portals[name]->load(j);
                     }
                     //else if (entity["__identifier"] == "Coin")
                     //{

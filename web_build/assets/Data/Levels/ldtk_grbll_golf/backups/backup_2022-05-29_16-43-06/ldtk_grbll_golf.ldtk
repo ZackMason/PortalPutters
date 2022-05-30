@@ -1997,57 +1997,6 @@
 							"defUid": 4,
 							"px": [16,80],
 							"fieldInstances": []
-						},
-						{
-							"__identifier": "PortalLink",
-							"__grid": [16,27],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": null,
-							"__smartColor": "#C3A530",
-							"iid": "f4aa8b40-dbe0-11ec-9378-ffaa61ac26e1",
-							"width": 16,
-							"height": 16,
-							"defUid": 21,
-							"px": [256,432],
-							"fieldInstances": [{ "__identifier": "dest", "__value": { "cx": 10, "cy": 7 }, "__type": "Point", "__tile": null, "defUid": 22, "realEditorValues": [{
-								"id": "V_String",
-								"params": ["10,7"]
-							}] }]
-						},
-						{
-							"__identifier": "PortalLink",
-							"__grid": [22,27],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": null,
-							"__smartColor": "#C3A530",
-							"iid": "f86bd900-dbe0-11ec-9378-a50696d5245b",
-							"width": 16,
-							"height": 16,
-							"defUid": 21,
-							"px": [352,432],
-							"fieldInstances": [{ "__identifier": "dest", "__value": { "cx": 10, "cy": 16 }, "__type": "Point", "__tile": null, "defUid": 22, "realEditorValues": [{
-								"id": "V_String",
-								"params": ["10,16"]
-							}] }]
-						},
-						{
-							"__identifier": "PortalLink",
-							"__grid": [11,27],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": null,
-							"__smartColor": "#C3A530",
-							"iid": "fb1f8750-dbe0-11ec-9378-db1d54004853",
-							"width": 16,
-							"height": 16,
-							"defUid": 21,
-							"px": [176,432],
-							"fieldInstances": [{ "__identifier": "dest", "__value": { "cx": 22, "cy": 7 }, "__type": "Point", "__tile": null, "defUid": 22, "realEditorValues": [{
-								"id": "V_String",
-								"params": ["22,7"]
-							}] }]
 						}
 					]
 				}

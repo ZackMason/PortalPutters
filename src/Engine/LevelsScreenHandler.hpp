@@ -6,10 +6,13 @@ struct LevelsScreenHandler : public GameEventHandler
 {
     json world_file;
     const std::filesystem::path levels_directory{S_ASSETS_PATH + "Data/Levels/"};
+    std::vector<bool> played_level;
+
     LevelsScreenHandler()
     {
         std::ifstream file(S_ASSETS_PATH + "Data/Levels/ldtk_grbll_golf.ldtk");
         file >> world_file;
+        played_level = std::vector<bool>(world_file["levels"].size(), false);
     }
     virtual ~LevelsScreenHandler()
     {
@@ -17,7 +20,7 @@ struct LevelsScreenHandler : public GameEventHandler
 
     bool should_quit() const override
     {
-        return IsKeyPressed(KEY_ESCAPE) || IsMouseButtonDown(MOUSE_BUTTON_MIDDLE);
+        return IsKeyPressed(KEY_ESCAPE) || IsMouseButtonPressed(MOUSE_BUTTON_MIDDLE);
     }
     
     Ref<GameEventHandler> tick(f32 dt) override
@@ -50,6 +53,16 @@ struct LevelsScreenHandler : public GameEventHandler
             int i = idx % columns;
             int j = idx / columns;
 
+            if (played_level[idx])
+            {
+                GuiSetStyle(DEFAULT, BASE_COLOR_NORMAL, ColorToInt(SKYBLUE));
+                GuiSetStyle(DEFAULT, BASE_COLOR_FOCUSED, ColorToInt(SKYBLUE));
+            }
+            else{
+                GuiSetStyle(DEFAULT, BASE_COLOR_NORMAL, ColorToInt(WHITE));
+                GuiSetStyle(DEFAULT, BASE_COLOR_FOCUSED, ColorToInt(WHITE));
+            }
+
             if(GuiButton({
                 i * button_width + margin + (i * margin*2), 
                 j * button_height + margin + (j * margin*2) + scroll.y, 
@@ -58,13 +71,15 @@ struct LevelsScreenHandler : public GameEventHandler
                 {
                     auto level_handler = std::make_shared<MainGameHandler>(level);
                     level_handler->golf_level.level = idx + 1;
+                    played_level[idx] = true;
                     return level_handler;
                 }
 
             ++idx;
             
         }
-
+        GuiSetStyle(DEFAULT, BASE_COLOR_NORMAL, ColorToInt(WHITE));
+        GuiSetStyle(DEFAULT, BASE_COLOR_FOCUSED, ColorToInt(WHITE));
 
         return nullptr;
 
